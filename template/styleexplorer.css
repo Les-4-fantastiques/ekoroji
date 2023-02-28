@@ -15,9 +15,16 @@ h1{
 
 }
 
+h3{
+    text-align: center;
+}
+
+
 p{
     margin-left:3rem;
 }
+
+
 
 .container {
     width: 600px;
@@ -75,10 +82,3 @@ p{
     border-right: none;
   }
 
-#article{
-    background-color: antiquewhite;
-    margin: 54px;
-    padding: 4px;
-    border-radius: 30px;
-    font-size: 30px;
-}
