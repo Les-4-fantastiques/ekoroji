@@ -75,7 +75,16 @@ p{
     border-right: none;
   }
 
-#article{
+#scans{
+    background-color: antiquewhite;
+    margin: 54px;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 30px;
+}
+
+img{
+    float:right;
     background-color: antiquewhite;
     margin: 54px;
     padding: 4px;
