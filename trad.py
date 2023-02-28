@@ -32,6 +32,16 @@ class TradHtml:
                 - Ne rien mettre si le dossier est le même que celui appelant cette bibliothèque
                 - La création des fichiers textes et Project.py se fera dans ce meme repertoire
 
+        Methods
+        -------
+        - read() : Permet de mettre à jour les fichiers HTML et CSS dans la classe
+            - IMPORTANT
+                - la méthode n'est pas obligatoire mais sans elle le classe n'aura pas conscience du nouveau contenu des fichiers du site web, ainsi l'emploi est fortement conseillé
+                    - Exemple : j'appelle read(), je modifie index.html, le class TradHtml, ne le saura pas il faut rappeler read()
+        - tradFiles() : Permet de lancer la conversion des fichiers HTML et CSS en langage python, cette méthode est obligatoire s'il l'on souhaite convertir une site web en programme python
+            - IMPORTANT
+                - la méthode n'utilisera que la dernière version dont elle a acces grace à la méthode read(), regarder la docstring plus haut
+
         Returns
         -------
         - retourne des fichiers textes du noms des fichiers HTML, avec comme contenu le programme HTML et CSS et la page actuelle
