@@ -5,40 +5,38 @@ TradHtml(nameFile, nameProject, nameFolder) : qui converti un site web HTML et C
 class TradHtml:
     def __init__(self, nameFile:list, nameProject:str, nameFolder:str = ""):
         """
+        Translate HTML and CSS to python with FLask
+        ===========================================
         Parameters
         ----------
         - nameFile : liste des fichiers HTML et CSS du site web à convertir
-        
-                     IMPORTANT
-
-                     Pour les pages CSS, il est obligatoire de réaliser un fichier CSS par HTML, et non un seul fichier CSS utilisé dans plusieurs fichiers HTML
-
-                     Renommer correctement le fichier CSS en fonction de la page HTML : hello.html -> hello.css ou stylehello.css
-                     
-                     Une autre orthographe ne sera pas fonctionnelle
+            - Exemple :
+                - "helloWorld.html"
+                - "styleHelloWorld.css"
+            - IMPORTANT
+                - Pour les pages CSS, il est obligatoire de réaliser un fichier CSS par HTML, et non un seul fichier CSS utilisé dans plusieurs fichiers HTML
+                - Renommer correctement le fichier CSS en fonction de la page HTML :
+                    "hello.html" -> "hello.css" ou "stylehello.css"
+                - Une autre orthographe ne sera pas fonctionnelle
 
         - nameProject : texte indiquant le nom du site final, ce dernier sera le nom du fichier .py avec flask intégré
-
-                        IMPORTANT
-
-                        Ne pas nommer le projet flask sinon le projet sera flask.py et le programme ne se lancera pas
+            - Exemple :
+                - "helloWorldProjet"
+            - IMPORTANT
+                - Ne pas nommer le projet flask sinon le projet sera "flask.py" et le programme ne se lancera pas
 
         - nameFoler : texte indiquant l'emplacement des fichiers HTML et CSS
-                        Exemple : Project/Flask/helloworld.py -> Project/Flask/
-
-                      IMPORTANT
-
-                      Ne rien mettre si le dossier est le même que celui appelant cette bibliothèque
-                      
-                      La création des fichiers textes et Project.py se fera dans ce meme repertoire
+            - Exemple :
+                - "Project/Flask/helloworld.py" -> "Project/Flask/"
+            - IMPORTANT
+                - Ne rien mettre si le dossier est le même que celui appelant cette bibliothèque
+                - La création des fichiers textes et Project.py se fera dans ce meme repertoire
 
         Returns
         -------
         - retourne des fichiers textes du noms des fichiers HTML, avec comme contenu le programme HTML et CSS et la page actuelle
-                Exemple : index.txt -> index.html + styleindex.css
-
-        - retourne un fichier Project.py qui suffit d'executer pour voir le site se créé via python et flask
-
+            - Exemple : "index.txt" -> "index.html" + "styleindex.css"
+        - retourne un fichier "Project.py" qui suffit d'executer pour voir le site se créé via python et flask
         - retourne un message de succès de la conversion de chaque fichier dans la console
 
         IMPORTANT
