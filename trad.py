@@ -70,6 +70,14 @@ class TradHtml:
 
    
     def read(self):
+        """
+        read()
+        ======
+            Permet de mettre à jour les fichiers HTML et CSS dans la classe
+            - IMPORTANT
+                - la méthode n'est pas obligatoire mais sans elle le classe n'aura pas conscience du nouveau contenu des fichiers du site web, ainsi l'emploi est fortement conseillé
+                    - Exemple : j'appelle read(), je modifie index.html, le class TradHtml, ne le saura pas il faut rappeler read()
+        """
         self.m_html = []
         self.m_css = []
         for elem in self.m_directoryFile:
@@ -81,6 +89,13 @@ class TradHtml:
         print(self.m_css)
 
     def tradFiles(self):
+        """
+        tradFiles()
+        ===========
+            Permet de lancer la conversion des fichiers HTML et CSS en langage python, cette méthode est obligatoire s'il l'on souhaite convertir une site web en programme python
+            - IMPORTANT
+                - la méthode n'utilisera que la dernière version dont elle a acces grace à la méthode read(), regarder la docstring plus haut
+        """
         with open(f'{self.m_nameFolder}{self.m_nameProject}.py', 'w') as new_file:
             new_file.write(f'from flask import Flask\n\napp = Flask(__name__)\n')
             for elem in self.m_html:
