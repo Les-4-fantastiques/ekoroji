@@ -10,20 +10,20 @@ h1{
     margin: 52px ;
     font-family: 'Segoe UI Black';
 	font-weight: 1000;
-	font-size: 125px;
+	font-size: 138px;
     line-height: 133px;
 
 }
 
 p{
-    margin-left:3rem;
+    font-size: 45px;
 }
 
 .container {
     width: 600px;
     margin: 0 auto 60px auto; /* Ajout d'une marge en bas de 60px pour éviter que le footer ne superpose le bas du .container */
     font-family: sans-serif;
-    font-size: 100;
+    font-size: 100px;
   }
   
   body > footer {
@@ -55,7 +55,7 @@ p{
     padding: 1rem;
     color: rgb(136, 204, 0);
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 55px;
     text-decoration: none;
     /* Ajout de bordures à gauche et à droite de chaque élément de menu (pour simuler les lignes de séparation) */
     border-right: 1px solid #111;
@@ -75,10 +75,8 @@ p{
     border-right: none;
   }
 
-#article{
-    background-color: antiquewhite;
-    margin: 54px;
-    padding: 4px;
-    border-radius: 30px;
-    font-size: 30px;
+img{
+  margin-left: 251px;
+  width: 300px;
+  height: 200px;
 }
