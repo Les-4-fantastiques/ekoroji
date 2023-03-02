@@ -108,7 +108,7 @@ class TradHtml:
 
     def __tradPageHtml(self, new_file, fileHtml):
         nameFile = fileHtml.split('/')[-1].split('.')[0]
-        directoryFileWithoutExt = fileHtml.split(".")[0]
+        directoryFileWithoutExt = f'{self.m_nameFolder}cache{nameFile}'
         if nameFile == 'index':
             new_file.write(f'@app.route("/")\n')
         else:
@@ -129,8 +129,8 @@ class TradHtml:
         print(f'Traduction de {fileHtml} réalisé avec succès dans {directoryFileWithoutExt}.txt!')
 
     def __tradCss(self, directory_fileCss):
-        name_file = self.__deleteText(directory_fileCss, 'style')
-        directoryFileWithoutExt = name_file.split(".")[0]
+        nameFile = self.__deleteText(directory_fileCss, 'style').split('/')[-1].split('.')[0]
+        directoryFileWithoutExt = f'{self.m_nameFolder}cache{nameFile}'
         with open(f'{directoryFileWithoutExt}.txt', 'a') as fileHtml:
             with open(directory_fileCss, 'r') as fileCss:
                 fileHtml.write(f'\n\n<style>\n{fileCss.read()}\n</style>')
