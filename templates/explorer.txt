@@ -7,7 +7,8 @@
     </head>
     <body>
         <h1>EXPLORER</h1><br><br>
-        <div id="cercle"></div>
+        <div id="cercle"><img src="/contents/icon/photo_camera_FILL0.png"></div>
+
         <footer>
             <nav>
                 <ul>
@@ -20,14 +21,11 @@
     </body>
 </html>
 
-<style>"
+<style>
 body {
-    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcHCAgICA0IBwcHCAoHBwcHBw8ICQcKIBEWIhQRExMYHSggGCYlGx8TITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAVEAEBAAAAAAAAAAAAAAAAAAAAAf/EABYBAQEBAAAAAAAAAAAAAAAAAAAFA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANQFRCYgoCKICiAKIoAAAAAAAAIAAAAAAAAAAqACooAACKAgoCKAAAAAAICiAKAAAAAAAAAAACKAAACAAAACggoCCgIKAgoCAAAAAAAAAAKgCoqAoAIAAAAAAAAAAAAAAAAAAAAAAAAACgACAAKCAAAoIKAIAKgoIKAgAAAAAAAAAAAKACAAAAAAKigAAgACooAAIAAAAAAAAAAACgAgACooAACKgAAAAAAAAAAAAAAAAAAAAKACAAKgCiAKgoIKAgAAKCCgIAAAAAAAAAAACgAgAAKCAAKigAAgACooAAIAAAAAAAAAAAAACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAJQAUAAAAABAAAAAAAAABQAAAAAAAAAAAf/2Q== );
-    background-size: cover;
-    background-repeat: repeat;
-    font-family: sans-serif;
-    height: 100vh;
-    }
+  background-color : #C3E6A1;
+  font-family: sans-serif;
+  }
 h1{
     text-align: center;
     margin: 52px ;
@@ -112,4 +110,4 @@ p{
     background: green;
     margin: 234px;
 }
-"</style>
+</style>

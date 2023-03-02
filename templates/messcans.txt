@@ -49,14 +49,11 @@
     </body>
 </html>
 
-<style>"
-body {/* soccupe du background et fond ainsi que les propriétés élémentaires du code */
-    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcHCAgICA0IBwcHCAoHBwcHBw8ICQcKIBEWIhQRExMYHSggGCYlGx8TITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAVEAEBAAAAAAAAAAAAAAAAAAAAAf/EABYBAQEBAAAAAAAAAAAAAAAAAAAFA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANQFRCYgoCKICiAKIoAAAAAAAAIAAAAAAAAAAqACooAACKAgoCKAAAAAAICiAKAAAAAAAAAAACKAAACAAAACggoCCgIKAgoCAAAAAAAAAAKgCoqAoAIAAAAAAAAAAAAAAAAAAAAAAAAACgACAAKCAAAoIKAIAKgoIKAgAAAAAAAAAAAKACAAAAAAKigAAgACooAAIAAAAAAAAAAACgAgACooAACKgAAAAAAAAAAAAAAAAAAAAKACAAKgCiAKgoIKAgAAKCCgIAAAAAAAAAAACgAgAAKCAAKigAAgACooAAIAAAAAAAAAAAAACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAJQAUAAAAABAAAAAAAAABQAAAAAAAAAAAf/2Q== );
-    background-size: cover;
-    background-repeat: repeat;
-    font-family: sans-serif;
-    height: 100vh;
-    }
+<style>
+body {
+  background-color : #C3E6A1;
+  font-family: sans-serif;
+  }
 h1{/*tout les h1 concernée et les propriétés les concernant*/
     text-align: center;
     margin: 52px ;
@@ -143,4 +140,4 @@ img{/*image dans les scans*/
     font-size: 30px;
 }
 
-"</style>
+</style>

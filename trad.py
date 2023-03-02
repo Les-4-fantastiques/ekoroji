@@ -96,7 +96,7 @@ class TradHtml:
             - IMPORTANT
                 - la méthode n'utilisera que la dernière version dont elle a acces grace à la méthode read(), regarder la docstring plus haut
         """
-        with open(f'{self.m_nameFolder}{self.m_nameProject}.py', 'w') as new_file:
+        with open(f'{self.m_nameProject}.py', 'w') as new_file:
             new_file.write(f'from flask import Flask\n\napp = Flask(__name__)\n')
             for elem in self.m_html:
                 nameFile = elem.split('/')[-1].split('.')[0]
@@ -133,7 +133,7 @@ class TradHtml:
         directoryFileWithoutExt = name_file.split(".")[0]
         with open(f'{directoryFileWithoutExt}.txt', 'a') as fileHtml:
             with open(directory_fileCss, 'r') as fileCss:
-                fileHtml.write(f'\n\n<style>"\n{fileCss.read()}\n"</style>')
+                fileHtml.write(f'\n\n<style>\n{fileCss.read()}\n</style>')
         print(f'Traduction de {directory_fileCss} réalisé avec succès !')
 
     def __deleteText(self, text, deleteMessage, ReplaceMessage = ''):

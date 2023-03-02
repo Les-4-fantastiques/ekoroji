@@ -1,15 +1,19 @@
+@font-face {
+	font-family: 'bebas neue';
+	src: url(‘fonts/BebasNeue-Regular.ttf’) format(‘truetype’)
+}
+
+
 body {
     background-color : #C3E6A1;
-    background-size: cover;
-    background-repeat: repeat;
-    font-family: sans-serif;
+    font-family: "sans-serif";
     }
 h1{
     text-align: center;
     margin: 52px ;
-    font-family: 'Segoe UI Black';
-	font-weight: 1000;
-	font-size: 138px;
+    font-family: 'bebas neue';
+	  font-weight: 1000;
+	  font-size: 138px;
     line-height: 133px;
 
 }
@@ -78,4 +82,8 @@ img{
   margin-left: 251px;
   width: 300px;
   height: 200px;
+}
+a{
+  color: black;
+  font-family: 'bebas neue';
 }
