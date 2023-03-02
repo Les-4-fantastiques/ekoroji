@@ -125,8 +125,8 @@ class TradHtml:
                         if '.css' in ligne:
                             pass
                     fileText.write(str(ligne))
-        new_file.write(f'    with open("{directoryFileWithoutExt}.txt", "r") as file:\n        return file.read().encode("utf-8")')
-        print(f'Traduction de {fileHtml} réalisé avec succès !')
+        new_file.write(f'    with open("{directoryFileWithoutExt}.txt", "r") as file:\n        return file.read()')
+        print(f'Traduction de {fileHtml} réalisé avec succès dans {directoryFileWithoutExt}.txt!')
 
     def __tradCss(self, directory_fileCss):
         name_file = self.__deleteText(directory_fileCss, 'style')

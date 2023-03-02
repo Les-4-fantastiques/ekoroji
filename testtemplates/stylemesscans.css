@@ -1,61 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Ekoroji</title></title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style/.css">
-    </head>
-    <body>
-        <h1>S'INFORMER</h1><br><br>
-            <div style="width: 854px; background-color: antiquewhite; margin: 40px;padding: 17px;border-radius: 30px;font-size: 58px;">
-                <a href="http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/" 
-                style="display:block; width:100%; height:100%;text-decoration: none;">Comment reduire mes déchets ?<br><img src="https://larevolutiondestortues.fr/wp-content/uploads/2018/09/reduire-ses-dechets-cuisine.jpg"></a>
-                 
-            </div>
-            <div style="width: 854px; background-color: antiquewhite; margin: 40px;padding: 17px;border-radius: 30px;font-size: 58px;">
-                <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006143752/" 
-                style="display:block; width:100%; height:100%;text-decoration: none;">L'avenir des déchets !! </a>
-            </div>
-        <footer>
-            <nav>
-                <ul>
-                    <li class="nav-items"><a href="/">S'informer</a></li>
-                    <li class="nav-items"><a href="explorer">Explorer</a></li>
-                    <li class="nav-items"><a href="messcans">Mes scans</a></li><!--liens vers les autres pages-->
-                </ul>
-            </nav>
-        </footer>
-    </body>
-</html>
-
-
-<style>"
-body {
+body {/* soccupe du background et fond ainsi que les propriétés élémentaires du code */
     background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcHCAgICA0IBwcHCAoHBwcHBw8ICQcKIBEWIhQRExMYHSggGCYlGx8TITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAVEAEBAAAAAAAAAAAAAAAAAAAAAf/EABYBAQEBAAAAAAAAAAAAAAAAAAAFA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ANQFRCYgoCKICiAKIoAAAAAAAAIAAAAAAAAAAqACooAACKAgoCKAAAAAAICiAKAAAAAAAAAAACKAAACAAAACggoCCgIKAgoCAAAAAAAAAAKgCoqAoAIAAAAAAAAAAAAAAAAAAAAAAAAACgACAAKCAAAoIKAIAKgoIKAgAAAAAAAAAAAKACAAAAAAKigAAgACooAAIAAAAAAAAAAACgAgACooAACKgAAAAAAAAAAAAAAAAAAAAKACAAKgCiAKgoIKAgAAKCCgIAAAAAAAAAAACgAgAAKCAAKigAAgACooAAIAAAAAAAAAAAAACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAIACgAAAAAIqAAAAAAAAAoAAAAAAAAAAAJQAUAAAAABAAAAAAAAABQAAAAAAAAAAAf/2Q== );
     background-size: cover;
     background-repeat: repeat;
     font-family: sans-serif;
     height: 100vh;
     }
-h1{
+h1{/*tout les h1 concernée et les propriétés les concernant*/
     text-align: center;
     margin: 52px ;
     font-family: 'Segoe UI Black';
-	font-weight: 1000;
-	font-size: 138px;
+	  font-weight: 1000;
+	  font-size: 138px;
     line-height: 133px;
-
 }
 
 p{
-    font-size: 45px;
+    margin-left:3rem;
 }
 
 .container {
     width: 600px;
     margin: 0 auto 60px auto; /* Ajout d'une marge en bas de 60px pour éviter que le footer ne superpose le bas du .container */
     font-family: sans-serif;
-    font-size: 100px;
+    font-size: 100;
   }
   
   body > footer {
@@ -107,9 +74,19 @@ p{
     border-right: none;
   }
 
-img{
-  margin-left: 251px;
-  width: 300px;
-  height: 200px;
+#scans{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+    background-color: antiquewhite;
+    margin: 54px;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 30px;
 }
-"</style>
+
+img{/*image dans les scans*/
+    float:right;
+    background-color: antiquewhite;
+    margin: 54px;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 30px;
+}
