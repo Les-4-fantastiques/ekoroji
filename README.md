@@ -1,5 +1,5 @@
 
-<img src="/contents/Logo_white.png" alt="Icon" width="128"/>
+<img src="website\files\logos\Ekoroji_light.svg" alt="Icon" width="128"/>
 
 # Ekoroji
 
