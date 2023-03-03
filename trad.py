@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 """
 TradHtml(nameFile, nameProject, nameFolder) : qui converti un site web HTML et CSS en un programme python utilisant Flask
 """
