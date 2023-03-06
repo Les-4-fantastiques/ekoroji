@@ -95,7 +95,7 @@ class TradHtml:
             - IMPORTANT
                 - la méthode n'utilisera que la dernière version dont elle a acces grace à la méthode read(), regarder la docstring plus haut
         """
-        with open(f'{self.m_nameProject}.py', 'w') as new_file:
+        with open(f'sources/server/{self.m_nameProject}.py', 'w') as new_file:
             new_file.write(f'from flask import Flask\n\napp = Flask(__name__)\n')
             for elem in self.m_html:
                 nameFile = elem.split('/')[-1].split('.')[0]
@@ -103,11 +103,11 @@ class TradHtml:
                 self.__tradPageHtml(new_file, elem)
             for elem in self.m_css:
                 self.__tradCss(elem)
-            new_file.write(f'\n\nif __name__=="__main__":\n    app.run()')
+            new_file.write(f'\n\ndef run():\n    if __name__=="__main__":\n        app.run()')
 
     def __tradPageHtml(self, new_file, fileHtml):
         nameFile = fileHtml.split('/')[-1].split('.')[0]
-        directoryFileWithoutExt = f'{self.m_nameFolder}cache{nameFile}'
+        directoryFileWithoutExt = f'sources/server/cache{nameFile}'
         if nameFile == 'index':
             new_file.write(f'@app.route("/")\n')
         else:
@@ -129,7 +129,7 @@ class TradHtml:
 
     def __tradCss(self, directory_fileCss):
         nameFile = self.__deleteText(directory_fileCss, 'style').split('/')[-1].split('.')[0]
-        directoryFileWithoutExt = f'{self.m_nameFolder}cache{nameFile}'
+        directoryFileWithoutExt = f'sources/server/cache{nameFile}'
         with open(f'{directoryFileWithoutExt}.txt', 'a') as fileHtml:
             with open(directory_fileCss, 'r') as fileCss:
                 fileHtml.write(f'\n\n<style>\n{fileCss.read()}\n</style>')
