@@ -76,16 +76,18 @@ p{
     margin-right: 10px;
     padding: 4px;
     border-radius: 65px;
-    font-size: 30px;
+    font-size: 50px;
     filter: drop-shadow(8px 8px 10px #474744);
     height:15.25% ;
+    text-decoration-color: black;
 }
 
 img{/*image dans les scans*/
     float:right;
     background-color: #F1EFE9;
-    margin: 54px;
+    margin-right: 25px;
     padding: 4px;
     border-radius: 30px;
-    font-size: 30px;
+    height: 174px;
+    width: 174px;
 }
