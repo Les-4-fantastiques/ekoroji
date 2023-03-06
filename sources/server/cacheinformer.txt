@@ -3,12 +3,22 @@
     <head>
         <title>Ekoroji</title></title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style/.css">
+        <link rel="stylesheet" href="styleinformer.css">
     </head>
     <body>
-        <h1>EXPLORER</h1><br><br>
-        <div id="cercle"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></div>
-
+        <h1>S'INFORMER</h1><br><br>
+            <div style="width: 854px; background-color: #F1EFE9; margin: 40px;padding: 17px;border-radius: 30px;font-size: 58px;font-family:'Bebas Neue';filter: drop-shadow(8px 8px 10px #474744);">
+                <a href="http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/" 
+                style="display:block; width:100%; height:100%;text-decoration: none;">Comment reduire mes déchets ?<br>
+                <p style="float:right"><img src="https://larevolutiondestortues.fr/wp-content/uploads/2018/09/reduire-ses-dechets-cuisine.jpg" /></p>
+                <p>Le bois est un matériau naturel d'origine végétale... </p>
+                <div style="clear:both"></div></a>
+                 
+            </div>
+            <div style="width: 854px; background-color: #F1EFE9; margin: 40px;padding: 17px;border-radius: 30px;font-size: 58px;filter: drop-shadow(8px 8px 10px #474744);">
+                <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006143752/" 
+                style="display:block; width:100%; height:100%;text-decoration: none;">L'avenir des déchets !! </a>
+            </div>
         <footer>
             <nav>
                 <ul>
@@ -21,37 +31,36 @@
     </body>
 </html>
 
+
 <style>
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url(‘/fonts/BenasNeue-Regular.ttf’) format(‘truetype’)
+}
+
+
 body {
-  background-color : #C3E6A1;
-  font-family: sans-serif;
-  }
+    background-color : #C3E6A1;
+    }
 h1{
     text-align: center;
     margin: 52px ;
-    font-family: 'Segoe UI Black';
-	font-weight: 1000;
-	font-size: 138px;
+    font-family:'Segoe UI Black';
+	  font-weight: 1000;
+	  font-size: 138px;
     line-height: 133px;
 
 }
 
-h3{
-    text-align: center;
-}
-
-
 p{
-    margin-left:3rem;
+    font-size: 45px;
 }
-
-
 
 .container {
     width: 600px;
     margin: 0 auto 60px auto; /* Ajout d'une marge en bas de 60px pour éviter que le footer ne superpose le bas du .container */
     font-family: sans-serif;
-    font-size: 100;
+    font-size: 100px;
   }
   
   body > footer {
@@ -86,7 +95,7 @@ p{
     font-size: 55px;
     text-decoration: none;
     /* Ajout de bordures à gauche et à droite de chaque élément de menu (pour simuler les lignes de séparation) */
-    
+   
   }
   body > footer > nav > ul > li > a:hover,
   body > footer > nav > ul > li > a:active,
@@ -102,11 +111,13 @@ p{
     border-right: none;
   }
 
-  #cercle {
-    width: 480px;
-    height: 480px;
-    border-radius: 250px;
-    background: #446127;
-    margin: 234px;
+img{
+  margin-left: 251px;
+  width: 300px;
+  height: 200px;
+}
+a{
+  color: black;
+  font-family: 'bebas neue';
 }
 </style>

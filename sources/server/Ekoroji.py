@@ -10,18 +10,18 @@ def index():
     with open("sources/server/cacheindex.txt", "r") as file:
         return file.read()
 
-"""     explorer     """
+"""     informer     """
 
-@app.route("/explorer")
-def explorer():
-    with open("sources/server/cacheexplorer.txt", "r") as file:
+@app.route("/informer")
+def informer():
+    with open("sources/server/cacheinformer.txt", "r") as file:
         return file.read()
 
-"""     messcans     """
+"""     populaire     """
 
-@app.route("/messcans")
-def messcans():
-    with open("sources/server/cachemesscans.txt", "r") as file:
+@app.route("/populaire")
+def populaire():
+    with open("sources/server/cachepopulaire.txt", "r") as file:
         return file.read()
 
 def run():
