@@ -1,33 +1,31 @@
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url(‘/fonts/BenasNeue-Regular.ttf’) format(‘truetype’)
+}
+
+
 body {
-  background-color : #C3E6A1;
-  font-family: sans-serif;
-  }
+    background-color : #C3E6A1;
+    }
 h1{
     text-align: center;
     margin: 52px ;
-    font-family: 'Segoe UI Black';
-	font-weight: 1000;
-	font-size: 138px;
+    font-family:'Segoe UI Black';
+	  font-weight: 1000;
+	  font-size: 138px;
     line-height: 133px;
 
 }
 
-h3{
-    text-align: center;
-}
-
-
 p{
-    margin-left:3rem;
+    font-size: 45px;
 }
-
-
 
 .container {
     width: 600px;
     margin: 0 auto 60px auto; /* Ajout d'une marge en bas de 60px pour éviter que le footer ne superpose le bas du .container */
     font-family: sans-serif;
-    font-size: 100;
+    font-size: 100px;
   }
   
   body > footer {
@@ -37,7 +35,7 @@ p{
     left: 0;
     right: 0;
     
-    background-color: rgb(64, 128, 09);
+    background-color: #446127;
     border-top: 1px solid gray;
   }
   
@@ -57,13 +55,12 @@ p{
   {
     display: block;
     padding: 1rem;
-    color: rgb(136, 204, 0);
+    color: #C3E6A1;
     font-family: sans-serif;
     font-size: 55px;
     text-decoration: none;
     /* Ajout de bordures à gauche et à droite de chaque élément de menu (pour simuler les lignes de séparation) */
-    border-right: 1px solid #111;
-    border-left: 1px solid #222;
+   
   }
   body > footer > nav > ul > li > a:hover,
   body > footer > nav > ul > li > a:active,
@@ -79,10 +76,12 @@ p{
     border-right: none;
   }
 
-  #cercle {
-    width: 480px;
-    height: 480px;
-    border-radius: 250px;
-    background: green;
-    margin: 234px;
+img{
+  margin-left: 251px;
+  width: 300px;
+  height: 200px;
+}
+a{
+  color: black;
+  font-family: 'bebas neue';
 }
