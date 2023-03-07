@@ -3,12 +3,29 @@
     <head>
         <title>Ekoroji</title></title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style/.css">
+        <link rel="stylesheet" href="stylepopulaire.css">
     </head>
     <body>
-        <h1>EXPLORER</h1><br><br>
-        <div id="cercle"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></div>
-
+        <h1>POPULAIRE</h1><br><br>
+        <ul id="scans">
+                <li class="nav-items"><a href="" class="nounderline">Le bois </a></li>
+                <p style="float:right"><img src="files\images\wood_full.png" width="128"/></p>
+                <p>Le bois est un matériau naturel d'origine végétale... </p>
+                <div style="clear:both"></div>
+            </ul>
+            <ul id="scans">  
+                <li class="nav-items"><a href="">Le carton</a></li><!--liens vers les autres pages-->
+                <p style="float:right"><img src="files\images\cardboard_round.png" width="128"/></p>
+                <p>Matière assez épaisse, faite de pâte à papier ... </p>
+                <div style="clear:both"></div>
+            </ul>
+            <ul id="scans">  
+                <li class="nav-items"><a href="">Le plastique</a></li><!--liens vers les autres pages-->
+                <p style="float:right"><img src="files\images\plastic_full.png" width="128"/></p>
+                <p>Toute substance pouvant être mise en œuvre par modelage ou par moulage... </p>
+                <div style="clear:both"></div>
+            </ul>
+           
         <footer>
             <nav>
                 <ul>
@@ -26,26 +43,18 @@ body {
   background-color : #C3E6A1;
   font-family: sans-serif;
   }
-h1{
+h1{/*tout les h1 concernée et les propriétés les concernant*/
     text-align: center;
     margin: 52px ;
     font-family: 'Segoe UI Black';
-	font-weight: 1000;
-	font-size: 138px;
+	  font-weight: 1000;
+	  font-size: 138px;
     line-height: 133px;
-
 }
-
-h3{
-    text-align: center;
-}
-
 
 p{
     margin-left:3rem;
 }
-
-
 
 .container {
     width: 600px;
@@ -81,7 +90,7 @@ p{
   {
     display: block;
     padding: 1rem;
-    color: #C3E6A1;
+    color:#C3E6A1;
     font-family: sans-serif;
     font-size: 55px;
     text-decoration: none;
@@ -102,11 +111,24 @@ p{
     border-right: none;
   }
 
-  #cercle {
-    width: 480px;
-    height: 480px;
-    border-radius: 250px;
-    background: #446127;
-    margin: 234px;
+#scans{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+    background-color: #F1EFE9;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    border-radius: 65px;
+    font-size: 30px;
+    filter: drop-shadow(8px 8px 10px #474744);
+    height:15.25% ;
 }
+
+img{/*image dans les scans*/
+    float:right;
+    background-color: #F1EFE9;
+    margin: 54px;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 30px;
+}
+
 </style>
