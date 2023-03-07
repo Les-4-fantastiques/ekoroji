@@ -42,14 +42,14 @@ def get_recycling_instructions(objet, api_key):
         image_content = requests.get(image_url).content
         image = Image.open(BytesIO(image_content))
     except ValueError:
-        print('error de veleur')
+        print('error de valeur')
     else:
         print("Dall-e marche")
 
     return recycling_instructions, image
 
 objet = input("Tu veux recycler quoi ? : ")
-api_key = "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"
+api_key = "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"
 recycling_instructions, image = get_recycling_instructions(objet, api_key)
 print(recycling_instructions)
 image.show()
