@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Le bois {% endblock %}</h1>
+    {% for post in posts %}
+        <a href="#">
+            <p>{{ post['cehfiahebviezhivbicsbu cefaevbsb'] }}</p>
+        </a>
+        <span class="badge badge-primary">{{ post['created'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
