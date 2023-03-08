@@ -49,7 +49,7 @@ def get_recycling_instructions(objet, api_key):
     return recycling_instructions, image
 
 objet = input("Tu veux recycler quoi ? : ")
-api_key = "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"
+api_key = ""
 recycling_instructions, image = get_recycling_instructions(objet, api_key)
 print(recycling_instructions)
 image.show()
