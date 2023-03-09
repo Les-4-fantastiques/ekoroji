@@ -9,7 +9,7 @@ import Ekoroji
 Ekoroji.run()
 """
 
-object = Waste('pomme')
+object = Waste('white paper')
 print(object.getRecyclingInstructions())
 print(object.getDescription())
-(object.getPicture()).show()
+(object.getPicture()).save(f'{object.getName()}.png')
