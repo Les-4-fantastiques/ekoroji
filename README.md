@@ -1,5 +1,5 @@
 
-<img src="website\files\logos\Ekoroji_light.svg" alt="Icon" width="128"/>
+<img src="sources\client\assets\logos\Ekoroji_light.svg" alt="Icon" width="128"/>
 
 # Ekoroji
 
@@ -21,7 +21,7 @@ Il est egalement disponible une bibliothèque permettant de convertir un site we
 
 | S'informer | Explorer | Mes scans |  
 |:----------:|:--------:|:----------:|
-| <img src="/contents/Ekoroji_app_informer.png" alt="Ekoroji_app_informer.png" width="300"/> | <img src="/contents/Ekoroji_app_explorer.png" alt="Ekoroji_app_explorer.png" width="300"/> | <img src="/contents/Ekoroji_app_scans.png" alt="Ekoroji_app_scans.png" width="300"/> |  
+| <img src="/doc/img/Ekoroji_app_informer.png" alt="Ekoroji_app_informer.png" width="300"/> | <img src="/doc/img/Ekoroji_app_explorer.png" alt="Ekoroji_app_explorer.png" width="300"/> | <img src="/doc/img/Ekoroji_app_scans.png" alt="Ekoroji_app_scans.png" width="300"/> |  
 
 ## Utilisation / Exemples
 
