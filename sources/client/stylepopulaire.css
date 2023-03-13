@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'BeBas';
-  src: url();
+  font-family: 'BeBas Neue';
+  src: url('/assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
 }
 body {
   background-color : #C3E6A1;
-  font-family: sans-serif;
+  font-family: 'Bebas Neue',sans-serif;
   }
 h1{/*tout les h1 concernée et les propriétés les concernant*/
     text-align: center;
