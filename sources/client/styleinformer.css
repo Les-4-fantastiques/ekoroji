@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'Bebas Neue';
-	src: url(‘/fonts/BenasNeue-Regular.ttf’) format(‘truetype’)
+  font-family: 'BeBas Neue';
+  src: url('/assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
 }
-
-
 body {
-    background-color : #C3E6A1;
-    }
+  background-color : #C3E6A1;
+  font-family: 'Bebas Neue',sans-serif;
+  }
+
 h1{
     text-align: center;
     margin: 52px ;
-    font-family:'Segoe UI Black';
+    font-family:'Bebas Neue';
 	  font-weight: 1000;
 	  font-size: 138px;
     line-height: 133px;
@@ -77,7 +77,7 @@ p{
   }
 
 img{
-  margin-left: 251px;
+  margin-left: 89px;
   width: 300px;
   height: 200px;
 }

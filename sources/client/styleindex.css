@@ -78,10 +78,34 @@ p{
     border-right: none;
   }
 
-  #cercle {
-    width: 480px;
-    height: 480px;
-    border-radius: 250px;
-    background: #446127;
-    margin: 234px;
+  #materiaux{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+    background-color: #F1EFE9;
+    margin-left: 10px;
+    margin-right: 484px;
+    padding: 4px;
+    border-radius: 65px;
+    font-size: 34px;
+    filter: drop-shadow(8px 8px 10px #474744);
+    height:465.4px ;
+    width: 465.4px;
+    text-decoration-color: black;
+}
+
+img{/*image dans les scans*/
+  float:right;
+  margin-right: 30px;
+  padding: 4px;
+  border-radius: 30px;
+  height:189px;
+  width: 369px;
+}
+
+#barrederechercher{
+  float: left;
+  margin-right: 30px;
+  margin-left: 266px;
+  padding: 4px;
+  border-radius: 30px;
+ 
+  
 }
