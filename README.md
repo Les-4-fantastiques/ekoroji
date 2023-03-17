@@ -23,9 +23,9 @@ Il est egalement disponible une bibliothèque permettant de convertir un site we
 ## <p align="center">Captures d'écran</p>
 
 <p align="center">
-<img src="/doc/img/Ekoroji_app_informer.png" alt="Ekoroji_app_informer.png" width=30%/>
-<img src="/doc/img/Ekoroji_app_explorer.png" alt="Ekoroji_app_explorer.png" width=30%/>
-<img src="/doc/img/Ekoroji_app_scans.png" alt="Ekoroji_app_scans.png" width=30%/>
+<img src="doc/img/Ekoroji_app_informer.png" alt="Ekoroji_app_informer.png" width=30%/>
+<img src="doc/img/Ekoroji_app_explorer.png" alt="Ekoroji_app_explorer.png" width=30%/>
+<img src="doc/img/Ekoroji_app_scans.png" alt="Ekoroji_app_scans.png" width=30%/>
 </p>
 
 
