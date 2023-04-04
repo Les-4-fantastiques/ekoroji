@@ -76,14 +76,16 @@ p{
 
 #scans{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
     background-color: #F1EFE9;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 4px;
-    border-radius: 65px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 75px;
     font-size: 50px;
     filter: drop-shadow(8px 8px 10px #474744);
-    height:15.25% ;
     text-decoration-color: black;
+    width: 850px;
+    height: 300px;
+    margin-top: 100px;
+
 }
 
 img{/*image dans les scans*/
@@ -91,16 +93,19 @@ img{/*image dans les scans*/
     background-color: #F1EFE9;
     margin-right: 30px;
     padding: 4px;
-    border-radius: 30px;
-    height: 220px;
-    width: 220px;
+    border-radius: 75px;
+    Width:200px;
+    Height:200px;
+    Top:50px;
 }
 
 svg{
   color: #C3E6A1;
   padding: 4px;
-  height: 50px;
-  width: 50px;
+  Width:140px;
+  Height:140px;
+  Top:61px;
+  Left:165px;
   background-position-x:left ;
   background-position-y: center ;
   margin :auto;

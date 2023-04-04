@@ -109,3 +109,16 @@ img{/*image dans les scans*/
  
   
 }
+
+svg{
+  color: #C3E6A1;
+  padding: 4px;
+  Width:140px;
+  Height:140px;
+  Top:61px;
+  Left:165px;
+  background-position-x:left ;
+  background-position-y: center ;
+  margin :auto;
+
+}
