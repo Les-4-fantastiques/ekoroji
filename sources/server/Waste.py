@@ -88,7 +88,7 @@ class Waste:
         Retourne:
         - self.description : une chaîne de caractères contenant la description du déchet
         """
-        self.description = self.__getRequest(f"C'est quoi un {self.__m_name} ? Dis moi en français")
+        self.description = self.__getRequest(f"C'est quoi {self.__m_name} ? Dis moi en français")
         return self.description
 
     def getName(self):

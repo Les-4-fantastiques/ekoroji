@@ -8,9 +8,8 @@ a.tradFiles()
 import Ekoroji
 Ekoroji.run()
 
-"""
-object = Waste('white paper')
+object = Waste('bois')
 print(object.getRecyclingInstructions())
 print(object.getDescription())
-(object.getPicture()).save(f'{object.getName()}.png')
-"""
+#(object.getPicture()).save(f'{object.getName()}.png')
+object.getPicture().show()
