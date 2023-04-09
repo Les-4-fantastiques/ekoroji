@@ -9,9 +9,9 @@ body {
 h1{/*tout les h1 concernée et les propriétés les concernant*/
     text-align: center;
     margin: 52px ;
-    font-family: 'Segoe UI Black';
+    font-family: 'Bebas Neue';
 	  font-weight: 1000;
-	  font-size: 138px;
+	  font-size: 117px;
     line-height: 133px;
 }
 
@@ -75,28 +75,30 @@ p{
   }
 
 #scans{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+
+    text-decoration-color: black;
     background-color: #F1EFE9;
-    margin-left: 50px;
-    margin-right: 50px;
     border-radius: 75px;
     font-size: 50px;
+    font-family:'Roboto';
     filter: drop-shadow(8px 8px 10px #474744);
-    text-decoration-color: black;
-    width: 850px;
-    height: 300px;
-    margin-top: 100px;
+    Width:850px;
+    Height:330px;
+    margin-top:115px;
+    margin-left:50px;
+    margin-right:50px;
 
 }
 
 img{/*image dans les scans*/
-    float:right;
     background-color: #F1EFE9;
-    margin-right: 30px;
-    padding: 4px;
-    border-radius: 75px;
+    float:right; 
+    margin-right: 50px; 
+    margin-bottom: 10px;
     Width:200px;
     Height:200px;
-    Top:50px;
+    border-radius:75px;
+    margin-top:0px;
 }
 
 svg{
