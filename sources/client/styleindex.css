@@ -3,12 +3,12 @@ body {
   font-family: sans-serif;
   }
 h1{
-    text-align: center;
-    margin: 52px ;
-    font-family: 'Segoe UI Black';
+  text-align: center;
+  margin: 52px ;
+  font-family: 'Bebas Neue';
 	font-weight: 1000;
 	font-size: 138px;
-    line-height: 133px;
+  line-height: 133px;
 
 }
 
@@ -78,7 +78,9 @@ p{
     border-right: none;
   }
 
-  #materiaux{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+  #materiaux-droit{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+    
+    float:right;
     background-color: #F1EFE9;
     margin-left: 10px;
     margin-right: 484px;
@@ -89,6 +91,20 @@ p{
     height:465.4px ;
     width: 465.4px;
     text-decoration-color: black;
+}
+
+#materiaux-gauche{/*les cadres des scans qui mene vers la base de données ainsi que leur propriété*/
+  float: left;
+  background-color: #F1EFE9;
+  margin-left: 10px;
+  margin-right: 484px;
+  padding: 4px;
+  border-radius: 65px;
+  font-size: 34px;
+  filter: drop-shadow(8px 8px 10px #474744);
+  height:465.4px ;
+  width: 465.4px;
+  text-decoration-color: black;
 }
 
 img{/*image dans les scans*/
