@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des déchets</title>
+</head>
+<body>
+    <h1>Liste des déchets</h1>
+    <ul>
+        {% for dechet in dechets %}
+            <li><a href="{{ url_for('dechet_detail', dechet_id=dechet.id) }}">{{ dechet.nom }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

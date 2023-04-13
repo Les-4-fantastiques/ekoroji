@@ -1,95 +1,90 @@
-import openai
 import requests
-from io import BytesIO
 from PIL import Image
-from KeyEncryption import *
+from io import BytesIO
+from KeyEncryption import KeyEncryption
+
 
 class Waste:
+    def __init__(self, name: str):
+        """__init__ _summary_
 
-    def __init__(self, name:str):
-        """
-        Constructeur de la classe Waste. Il initialise le nom de l'objet déchet et la clé API OpenAI.
+        Parameters
+        ----------
+        name : str
+            _description_
         """
         self.__m_name = name
-        key_api_openai = KeyEncryption()
-        key_api_openai.setKeyEncrypted('tl.SOhM7SCDkO{LvxHoK6:IU4CmclGKsRbTC:{PuFbFLHRnDtXW')
-        openai.api_key = key_api_openai.getKeyClean()
+        key_api = KeyEncryption()
+        key_api.setKeyEncrypted(
+            'de8:737c47nti54:7d77bf684f48q26561dkto6875e3421859')
+        self.url_image = "https://openai80.p.rapidapi.com/images/generations"
+        self.url_chat = "https://openai80.p.rapidapi.com/chat/completions"
+        self.headers = {
+            "content-type": "application/json",
+            "X-RapidAPI-Key": key_api.getKeyClean(),
+            "X-RapidAPI-Host": "openai80.p.rapidapi.com"
+        }
 
-    def getPicture(self, definition:int = 512):
-        """
-        Cette méthode permet de récupérer une image du déchet en question en faisant une requête à l'API d'OpenAI.
-        
-        Paramètres:
-        - definition : la définition de l'image à récupérer
-        
-        Retourne:
-        - self.image : une instance de la classe Image (PIL) de l'image récupérée
-        """
+    def getPictures(self, definition: int = 512):
+        self.images = []
         try:
-            response = openai.Image.create(
-                prompt=f'3d render of a cute {self.__m_name} on dark green background, digital art',
-                n = 1,
-                size = f'{definition}x{definition}'
-            )
-            image_url = response['data'][0]['url']
-            image_content = requests.get(image_url).content
-            self.image = Image.open(BytesIO(image_content))
+            self.payload = {
+                "prompt": f"Un(e) {self.__m_name} au centre de l'image sur un fond vert foncé (#446127)",
+                "n": 2,
+                "size": f'{definition}x{definition}'
+            }
+            response = requests.post(
+                self.url_image, headers=self.headers, json=self.payload)
+            if response.status_code == 200:
+                data = response.json()
+                for i, image_data in enumerate(data['data']):
+                    image_url = image_data['url']
+                    image_content = requests.get(image_url).content
+                    self.images.append(Image.open(BytesIO(image_content)))
+            else:
+                print(
+                    f"Erreur lors de la requête : {response.status_code} {response.reason}")
         except ValueError:
             print('value error')
             return None
         else:
             print('no error')
-        return self.image
-        
-    def __getRequest(self, prompt:str):
-        """
-        Cette méthode est une méthode privée qui permet de faire une requête textuelle à l'API d'OpenAI en donnant un prompt.
-        
-        Paramètres:
-        - prompt : la demande à envoyer à l'API d'OpenAI
-        
-        Retourne:
-        - request_value : la réponse de l'API à la demande sous forme de chaîne de caractères
-        """
+        return self.images
+
+    def __getRequest(self, prompt: str):
+        request_value = ''
         try:
-            response = openai.Completion.create(
-                engine="text-davinci-002",
-                prompt=prompt,
-                max_tokens=500,
-                n=1,
-                stop=None,
-                temperature=0.5,
-                top_p=1,
-                frequency_penalty=0,
-                presence_penalty=0
-            )
-            request_value = response.choices[0].text.strip()
+            payload = {
+                #"model": "text-davinci-002",
+                "model": "gpt-3.5-turbo",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
+            }
+            response = requests.request("POST", self.url_chat, json=payload, headers=self.headers)
+            if response.status_code == 200:
+                data = response.json()
+                request_value = data['choices'][0]['message']['content']
+            else:
+                print(
+                    f"Erreur lors de la requête : {response.status_code} {response.reason}")
         except ValueError:
             print('value error')
             return None
         else:
             print('no error')
         return request_value
-
+    
     def getRecyclingInstructions(self):
-        """
-        Cette méthode permet de récupérer les différentes possibilités de recyclage du déchet en question.
-        
-        Retourne:
-        - self.recycling_instructions : une chaîne de caractères contenant les différentes possibilités de recyclage
-        """
-        self.recycling_instructions = self.__getRequest(f'Fais moi une liste des différentes possibilités pour recycler {self.__m_name} ?')
+        self.recycling_instructions = self.__getRequest(f'Pouvez-vous générer une liste de 5 à 10 façons de recycler cet(te) {self.__m_name} ?')
         return self.recycling_instructions
-
+    
     def getDescription(self):
-        """
-        Cette méthode permet de récupérer la description du déchet en question.
-        
-        Retourne:
-        - self.description : une chaîne de caractères contenant la description du déchet
-        """
-        self.description = self.__getRequest(f"C'est quoi {self.__m_name} ? Dis moi en français")
+        self.description = self.__getRequest(f"Donnez une définition ou une description courte de l'objet suivant : {self.__m_name}")
         return self.description
-
+    
     def getName(self):
         return self.__m_name

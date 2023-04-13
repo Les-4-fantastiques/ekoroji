@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h1>Articles sur l'écologie</h1>
+    {% for article in articles %}
+      <div class="card">
+        <h2>{{ article.title }}</h2>
+        <p class="meta">{{ article.source }} | {{ article.date }}</p>
+        <p>{{ article.description }}</p>
+        <a href="{{ article.url }}" target="_blank">Lire l'article complet</a>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

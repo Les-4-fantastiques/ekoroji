@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h1>Les 10 déchets les plus recherchés par la communauté</h1>
+    <ol>
+      {% for item in community_list %}
+        <li><a href="{{ url_for('search', query=item.name) }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}
