@@ -1,0 +1,16 @@
+{%extends "layout.html"%}
+
+{% block content %}
+
+<h1>Les déchets les plus populaires</h1>
+{% for waste in wastes %}
+
+<ul id="waste_short">
+    <li>{{ waste.name }}</li>
+    <p><img src={{waste.image}} width="128" class = "img-default"/></p>
+    <p>{{ waste.description }}</p>
+</ul>
+
+{% endfor %}
+
+{% endblock content %}

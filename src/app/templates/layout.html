@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if title and title != "Home" %}
+    <title>Ekoroji | {{ title }}</title>
+    {% else %}
+    <title>Ekoroji</title>
+    {% endif %}
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head%}{% endblock %}
+</head>
+
+<body>
+    <div class="div-content-site">
+        {% block content%}{% endblock %}
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/news">S'informer</a></li>
+                <li><a href="/popular">Les déchets les plus populaires</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/* Import des polices Bebas Neue et Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto');
+
+body {
+    background-color: #C3E6A1;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.navbar {
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    top: 0%;
+    height: 550px;
+    background: #C3E6A1;
+    z-index: 9999;
+    margin: 0;
+}
+
+.navbar h1 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 225px;
+    line-height: 270px;
+    color: #000000;
+}
+
+.navbar-blur {
+    position: absolute;
+    left: -4.63%;
+    right: -4.63%;
+    top: 400px;
+    bottom: -100px;
+    background: #C3E6A1;
+    filter: blur(25px);
+}
+
+.div-content-site {
+    left: 0%;
+    right: 0%;
+    margin-top: 765px;
+    margin-bottom: 375px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 260px;
+    background: #446127;
+    border-top: 1px
+}

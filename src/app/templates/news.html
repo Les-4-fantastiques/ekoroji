@@ -1,0 +1,32 @@
+{%extends "layout.html"%}
+
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+
+{% endblock %}
+{% block content %}
+
+<nav class="navbar">
+    <h1>S'informer</h1>
+    <div class="navbar-blur"></div>
+</nav>
+
+{% for new in newspapers%}
+
+<div class="new-container">
+    <a href={{new.link}} target="_blank">
+        <div class="text-container">
+            <h2>{{ new.title }}</h2>
+            <p>{{ new.content }}</p>
+        </div>
+        <div class="image-container">
+            <img src={{new.image}} alt="Image">
+        </div>
+        <div style="clear:both"></div>
+    </a>
+</div>
+
+{% endfor %}
+
+{% endblock content %}
