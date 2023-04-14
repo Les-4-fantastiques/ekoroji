@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>All Tasks</h2>
+  <ul id="task-list">
+    {% for task in tasks %}
+    <li>
+      <a href="{{ url_for('view_task', task_id=task.id) }}">
+        {% if task.image %}
+        <img src="{{ task.image }}" alt="{{ task.name }}">
+        {% endif %}
+        <h3>{{ task.name }}</h3>
+        <p>{{ task.description }}</p>
+        <small>Created {{ moment(task.created_date).fromNow() }} - {{ task.views }} views</small>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -7,7 +7,21 @@
         <h2>{{ task.title }}</h2>
         <p>{{ task.description }}</p>
         <p><strong>Status:</strong> {% if task.complete %}Complete{% else %}Incomplete{% endif %}</p>
-        <img src="{{ url_for('static', filename='images/tasks/' + task.image_file) }}" alt="Task Image"> <!-- modification ici pour afficher l'image -->
+        <img src="{{ url_for('static', filename='images/tasks/' + task.image_file) }}" alt="Task Image">
         <p><a href="{{ url_for('edit', task_id=task.id) }}">Edit</a> | <a href="{{ url_for('delete', task_id=task.id) }}" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a></p>
     </div>
+
+    <hr>
+
+    <h2>Task Counter</h2>
+    <p>This task has been viewed {{ task.counter }} times.</p>
+
+    <hr>
+
+    <h2>Search for Tasks</h2>
+    <form method="GET">
+        <label for="search">Search:</label>
+        <input type="text" name="search" id="search">
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}

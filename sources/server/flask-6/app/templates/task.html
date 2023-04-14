@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div id="task">
+    {% if task.image %}
+    <img src="{{ task.image }}" alt="{{ task.name }}">
+    {% endif %}
+    <h2>{{ task.name }}</h2>
+    <p>{{ task.description }}</p>
+    <small>Created {{ moment(task.created_date).fromNow() }} - {{ task.views }} views</small>
+    {% if task.completed %}
+    <p class="completed">Completed on {{ moment(task.completed_date).format('MMMM Do, YYYY') }}</p>
+    {% endif %}
+    <p>
+      <a href="{{ url_for('edit_task', task_id=task.id) }}">Edit</a> |
+      <a href="{{ url_for('delete_task', task_id=task.id) }}">Delete</a>
+    </p>
+  </div>
+{% endblock %}

@@ -1,30 +1,46 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-    <h1>To-Do List</h1>
 
-    <form method="POST" action="{{ url_for('add') }}">
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title">
+<div class="container">
+
+  <div class="row">
+    <div class="col-12">
+      <h1 class="mb-3">To-Do List</h1>
+    </div>
+  </div>
+
+  <!-- Recherche des tâches -->
+  <form class="mb-3" method="GET" action="{{ url_for('index') }}">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <input type="text" class="form-control" name="q" placeholder="Rechercher une tâche" value="{{ request.args.get('q', '') }}">
+      </div>
+      <div class="col-12 col-md-6">
+        <button type="submit" class="btn btn-primary btn-block">Rechercher</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    {% for task in tasks if task.title.lower()|search(request.args.get('q', '').lower()) %}
+    <div class="col-12 col-md-4 mb-3">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/tasks/' + task.image_file) }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ task.title }}</h5>
+          <p class="card-text">{{ task.description }}</p>
+          <p class="card-text"><small class="text-muted">Complétée: {% if task.complete %} Oui {% else %} Non {% endif %}</small></p>
+          <p class="card-text"><small class="text-muted">Vues: {{ task.views }}</small></p>
+          <a href="{{ url_for('view', task_id=task.id) }}" class="btn btn-primary">Voir</a>
+          <a href="{{ url_for('edit', task_id=task.id) }}" class="btn btn-warning">Modifier</a>
+          <a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger">Supprimer</a>
         </div>
-        <div>
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"></textarea>
-        </div>
-        <button type="submit">Add Task</button>
-    </form>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
-    <h2>Tasks:</h2>
+</div>
 
-    <ul>
-        {% for task in tasks %}
-            <li{% if task.complete %} class="complete"{% endif %}>
-                {{ task.title }}
-                <a href="{{ url_for('view', task_id=task.id) }}">View</a>
-                <a href="{{ url_for('edit', task_id=task.id) }}">Edit</a>
-                <a href="{{ url_for('delete', task_id=task.id) }}" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
 {% endblock %}
