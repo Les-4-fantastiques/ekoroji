@@ -138,6 +138,14 @@ def popular():
 def news():
     return render_template('news.html', newspapers=newspapers, title='News', location='news')
 
+@app.route('/add-waste')
+def add_waste():
+    return render_template('add-waste.html', title='Add waste', location='add-waste')
+
+@app.route('/add-new')
+def add_new():
+    return render_template('add-new.html', title='Add news', location='add-news')
+
 nb = 0
 @app.route('/waste/' + str(nb))
 def waste():

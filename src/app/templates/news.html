@@ -3,6 +3,7 @@
 {% block head%}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/article-waste-container.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add-container.css') }}">
 {% endblock %}
 {% block content %}
 <div class="div-content-site">
@@ -12,6 +13,12 @@
         <div class="navbar-blur"></div>
         <h1>S'INFORMER</h1>
     </nav>
+
+    <div class="add-container-large">
+        <a href="#" target="_blank">
+            <h2>Ajouter un article</h2>
+        </a>
+    </div>
 
     {% for new in newspapers%}
 

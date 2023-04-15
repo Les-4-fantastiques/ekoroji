@@ -2,6 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/waste-container.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add-container.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -12,8 +13,14 @@
         <h1>EXPLORER</h1>
     </nav>
 
+    <div class="add-container">
+        <a href="#" target="_blank">
+            <h2>Ajouter un déchet</h2>
+        </a>
+    </div>
+
     {% set enumerate = namespace() %}
-    {% set enumerate.index = 0 %}
+    {% set enumerate.index = 1 %}
 
     {% for waste in wastes %}
     {% if enumerate.index % 2 == 0 %}
@@ -27,7 +34,7 @@
         <a href="#" target="_blank">
             <h2 class="text-container">{{ waste.name }}</h2>
             <div class="image-container">
-                <img src={{ url_for('static', filename='uploads/wastes/' + waste.id + '.png') }} alt="Image">
+                <img src={{ url_for('static', filename='uploads/wastes/' + waste.id + '.png' ) }} alt="Image">
             </div>
             <div style="clear:both"></div>
         </a>
