@@ -1,27 +1,50 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, send_from_directory
 
 app = Flask(__name__)
 
 wastes = [
     {
-        'id': 1,
-        'name': 'Plastic',
-        'description': 'Plastic is a material consisting of any of a wide range of synthetic or semi-synthetic organic compounds that are malleable and so can be molded into solid objects. Plasticity is the general property of all materials which can deform irreversibly without breaking but, in the class of moldable polymers, this occurs to such a degree that their actual name derives from this specific ability. Plastics are typically organic polymers of high molecular mass, but they often contain other substances. They are usually synthetic, most commonly derived from petrochemicals, but many are partially natural. Depending on their chemical structure, plastics can be either amorphous or semi-crystalline and may be amorphous or crystalline. Plastics are usually organic polymers of high molecular mass, but they often contain other substances. They are usually synthetic, most commonly derived from petrochemicals, but many are partially natural. Depending on their chemical structure, plastics can be either amorphous or semi-crystalline and may be amorphous or crystalline.',
+        'id': '0',
+        'name': 'Bois',
+        'description': 'Le bois est arbre ...',
         'image': '',
-        'list_recycling_possibilitites': [
-
-        ],
+        'list_recycling_possibilitites': "-Compost\n-Chipping pour mulch\n-Bois-énergie\n-Papier\n-Plastique\n-Verre\n-Métal",
         'nb_views': 0,
         'last_viewed': '2020-01-01 00:00:00',
     },
     {
-        'id': 2,
-        'name': 'Glass',
-        'description': 'Glass is a non-crystalline amorphous solid that is often transparent and has widespread practical, technological, and decorative use in, for example, window panes, tableware, and optoelectronics. The most familiar, and historically the oldest, types of manufactured glass are "silicate glasses" based on the chemical compound silica (silicon dioxide, or quartz), the primary constituent of sand. The term glass, in popular usage, is often used to refer only to this type of material. However, glass can refer to other non-crystalline amorphous solids, such as sheet glass, which is made of a variety of non-silicate materials. The term glass, in popular usage, is often used to refer only to this type of material. However, glass can refer to other non-crystalline amorphous solids, such as sheet glass, which is made of a variety of non-silicate materials.',
+        'id': '1',
+        'name': 'Carton',
+        'description': 'Un carton est une boîte en carton ...',
         'image': '',
-        'list_recycling_possibilitites': [
-
-        ],
+        'list_recycling_possibilitites': '',
+        'nb_views': 0,
+        'last_viewed': '2020-01-01 00:00:00',
+    },
+    {
+        'id': '2',
+        'name': 'Fer',
+        'description': 'Une feraille est un déchet métallique ...',
+        'image': '',
+        'list_recycling_possibilitites': '',
+        'nb_views': 0,
+        'last_viewed': '2020-01-01 00:00:00',
+    },
+    {
+        'id': '3',
+        'name': 'Plastique',
+        'description': 'Les plastiques sont faits de matériaux naturels comme la cellulose, le charbon...',
+        'image': '',
+        'list_recycling_possibilitites': '',
+        'nb_views': 0,
+        'last_viewed': '2020-01-01 00:00:00',
+    },
+    {
+        'id': '4',
+        'name': 'Papier',
+        'description': 'Un papier blanc est un support vierge utilisé pour écrire ou dessiner ...',
+        'image': '',
+        'list_recycling_possibilitites': '',
         'nb_views': 0,
         'last_viewed': '2020-01-01 00:00:00',
     }
@@ -103,14 +126,19 @@ newspapers = [
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='Home')
+    return render_template('index.html', wastes=wastes, title='Home', location='index')
 
 
 @app.route('/popular')
 def popular():
-    return render_template('popular.html', wastes=wastes, title='Popular')
+    return render_template('popular.html', wastes=wastes, title='Popular', location='popular')
 
 
 @app.route('/news')
 def news():
-    return render_template('news.html', newspapers=newspapers, title='News')
+    return render_template('news.html', newspapers=newspapers, title='News', location='news')
+
+nb = 0
+@app.route('/waste/' + str(nb))
+def waste():
+    return render_template('waste.html', waste=wastes[nb], title=wastes[nb]['name'], location='waste')

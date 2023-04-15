@@ -7,23 +7,63 @@ body {
 
 }
 
-.navbar {
+.navbar,
+.navbar-search {
     position: fixed;
     left: 0%;
     width: 100%;
     top: 0%;
-    height: 550px;
-    background: #C3E6A1;
     z-index: 9999;
     margin: 0;
 }
 
-.navbar h1 {
+.navbar {
+    height: 650px;
+}
+
+.navbar-search {
+    height: 850px;
+}
+
+.navbar-clear,
+.navbar-search-clear {
     position: absolute;
-    top: 5%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    background: #C3E6A1;
+}
+
+.navbar-clear {
+    bottom: 20%;
+}
+
+.navbar-search-clear {
+    bottom: 14.29%;
+}
+
+.navbar-blur, .navbar-search-blur{
+    position: absolute;
+    left: -4.63%;
+    right: -4.63%;
+    bottom: 0%;
+    background: #C3E6A1;
+    filter: blur(25px);
+}
+
+.navbar-blur {
+    top: 40%;
+}
+
+.navbar-search-blur {
+    top: 57.14%;
+}
+
+.navbar h1,
+.navbar-search h1 {
     left: 0;
     right: 0;
-    bottom: 5%;
+    position: absolute;
     margin: auto;
     display: flex;
     align-items: center;
@@ -37,20 +77,29 @@ body {
     color: #000000;
 }
 
-.navbar-blur {
-    position: absolute;
-    left: -4.63%;
-    right: -4.63%;
-    top: 400px;
-    bottom: -100px;
-    background: #C3E6A1;
-    filter: blur(25px);
+.navbar h1 {
+    top: 5%;
+    bottom: 5%;
+}
+
+.navbar-search h1 {
+    top: 3.82%;
+    bottom: 27.35%;
 }
 
 .div-content-site {
+    position: relative;
     left: 0%;
     right: 0%;
     margin-top: 765px;
+    margin-bottom: 375px;
+}
+
+.div-content-site-search {
+    position: relative;
+    left: 0%;
+    right: 0%;
+    margin-top: 965px;
     margin-bottom: 375px;
 }
 
@@ -62,4 +111,37 @@ footer {
     height: 260px;
     background: #446127;
     border-top: 1px
+}
+
+footer a {
+    position: absolute;
+    top: 23.08%;
+    bottom: 23.08%;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.btn-news {
+    left: 15.28%;
+    right: 71.76%;
+}
+
+.btn-index {
+    left: 43.52%;
+    right: 43.52%;
+}
+
+.btn-popular {
+    left: 71.76%;
+    right: 15.28%;
+}
+
+footer a div {
+    position: absolute;
+    left: 17.86%;
+    right: 17.86%;
+    top: 17.86%;
+    bottom: 17.86%;
 }

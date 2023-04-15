@@ -1,8 +1,37 @@
-{%extends "layout.html"%}
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/waste-container.css') }}">
+{% endblock %}
 
 {% block content %}
+<div class="div-content-site-search">
+    <nav class="navbar-search">
+        <div class="navbar-search-clear"></div>
+        <div class="navbar-search-blur"></div>
+        <h1>EXPLORER</h1>
+    </nav>
 
-<br><br><br><br><br>
-<h1>EXPLORER</h1><br><br><br>
+    {% set enumerate = namespace() %}
+    {% set enumerate.index = 0 %}
 
+    {% for waste in wastes %}
+    {% if enumerate.index % 2 == 0 %}
+    {% set container = 'content-container-right' %}
+    {% else %}
+    {% set container = 'content-container-left' %}
+    {% endif %}
+    {% set enumerate.index = enumerate.index + 1 %}
+
+    <div class="{{ container }}">
+        <a href="#" target="_blank">
+            <h2 class="text-container">{{ waste.name }}</h2>
+            <div class="image-container">
+                <img src={{ url_for('static', filename='uploads/wastes/' + waste.id + '.png') }} alt="Image">
+            </div>
+            <div style="clear:both"></div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}

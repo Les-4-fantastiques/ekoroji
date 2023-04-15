@@ -1,0 +1,108 @@
+.image-container,
+.description-container,
+.list_recycling_possibilitites-container {
+    position: absolute;
+    left: 10.65%;
+    right: 10.65%;
+}
+
+.image-container {
+    height: 500px;
+    margin-top: 115px;
+}
+
+.description-container {
+    height: 318px;
+    top: 730px;
+}
+
+.list_recycling_possibilitites-container {
+    height: 351px;
+    top: 1163px;
+}
+
+.image-container h2,
+.description-container h2,
+.list_recycling_possibilitites-container h2 {
+    position: absolute;
+    height: 67px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+.image-container h2 {
+    width: 123px;
+}
+
+.description-container h2,
+.list_recycling_possibilitites-container h2 {
+    width: 253px;
+}
+
+.image-refresh,
+.description-refresh,
+.list_recycling_possibilitites-refresh {
+    position: absolute;
+    width: 235px;
+    background: #446127;
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-refresh {
+    height: 318px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.description-refresh,
+.list_recycling_possibilitites-refresh {
+    right: 0px;
+    top: 0%;
+    bottom: 0%;
+}
+
+.image-refresh img,
+.description-refresh img,
+.list_recycling_possibilitites-refresh img {
+    align-self: center;
+    position: absolute;
+    width: 40%;
+    max-width: 136px;
+    max-height: 150px;
+    border-radius: 0;
+}
+
+.image-waste {
+    position: absolute;
+    left: 41.18%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 150px;
+}
+
+.description-container p,
+.list_recycling_possibilitites-container p {
+    position: absolute;
+    left: 0%;
+    right: 41.53%;
+    top: 39.31%;
+    bottom: 0%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #474744;
+}

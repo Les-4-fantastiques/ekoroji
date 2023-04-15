@@ -14,15 +14,37 @@
 </head>
 
 <body>
-    <div class="div-content-site">
-        {% block content%}{% endblock %}
-    </div>
+    {% block content%}{% endblock %}
     <footer>
         <nav>
             <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/news">S'informer</a></li>
-                <li><a href="/popular">Les déchets les plus populaires</a></li>
+                <li><a href="/" class="btn-index">
+                        <div>
+                            {% if location == 'index' %}
+                            <img src="{{ url_for('static', filename='assets/icons/search_2.svg') }}" alt="Icon">
+                            {% else %}
+                            <img src="{{ url_for('static', filename='assets/icons/search_1.svg') }}" alt="Icon">
+                            {% endif %}
+                        </div>
+                    </a></li>
+                <li><a href="/news" class="btn-news">
+                        <div>
+                            {% if location == 'news' %}
+                            <img src="{{ url_for('static', filename='assets/icons/information_2.svg') }}" alt="Icon">
+                            {% else %}
+                            <img src="{{ url_for('static', filename='assets/icons/information_1.svg') }}" alt="Icon">
+                            {% endif %}
+                        </div>
+                    </a></li>
+                <li><a href="/popular" class="btn-popular">
+                        <div>
+                            {% if location == 'popular' %}
+                            <img src="{{ url_for('static', filename='assets/icons/community_2.svg') }}" alt="Icon">
+                            {% else %}
+                            <img src="{{ url_for('static', filename='assets/icons/community_1.svg') }}" alt="Icon">
+                            {% endif %}
+                        </div>
+                    </a></li>
             </ul>
         </nav>
     </footer>
