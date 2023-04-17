@@ -38,7 +38,7 @@ def add_new():
         db.session.commit()
         flash(
             f"L'article '{form.article_title.data}' a été ajouté !", 'success')
-        return redirect(url_for('index'))
+        return redirect(url_for('news'))
     return render_template('add-new.html', title='Add news', location='add-news', form=form)
 
 
