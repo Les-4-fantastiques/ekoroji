@@ -14,7 +14,7 @@
     </nav>
 
     <div class="add-container">
-        <a href="#" target="_blank">
+        <a href="{{url_for('add_waste')}}" target="_self">
             <h2>Ajouter un déchet</h2>
         </a>
     </div>
@@ -31,7 +31,7 @@
     {% set enumerate.index = enumerate.index + 1 %}
 
     <div class="{{ container }}">
-        <a href="#" target="_blank">
+        <a href="#" target="_self">
             <h2 class="text-container">{{ waste.name }}</h2>
             <div class="image-container">
                 <img src={{ url_for('static', filename='uploads/wastes/' + waste.id + '.png' ) }} alt="Image">

@@ -13,16 +13,29 @@
         <h1>Ajouter</h1>
     </nav>
 
-    <div class="form-container">
-        <h2>Nom</h2>
-        <div>
-            <p>Nom du déchet ...</p>
-        </div>
-    </div>
+    <form method="POST" , action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-container">
+            <dir class="form-container-1">
+                {{ form.waste_name.label(class="form-label") }}
+                {% if form.waste_name.errors %}
+                {{ form.waste_name(class="form-input") }}
+                <div class="error-message">
+                    {% for error in form.waste_name.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
 
-    <div class="validation-container-waste">
-        <h2>Ajouter le déchet</h2>
-    </div>
+                {% else %}
+                {{ form.waste_name(class="form-input") }}
 
+                {% endif %}
+
+            </dir>
+        </fieldset>
+        <dir class="validation-container-2">
+            {{form.waste_validated(class="btn-validation")}}
+        </dir>
+    </form>
 </div>
 {% endblock content %}

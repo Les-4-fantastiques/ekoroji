@@ -1,152 +1,16 @@
-from flask import Flask, render_template, url_for, send_from_directory
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ekoroji.db'
+db = SQLAlchemy(app)
 
-wastes = [
-    {
-        'id': '0',
-        'name': 'Bois',
-        'description': 'Le bois est arbre ...',
-        'image': '',
-        'list_recycling_possibilitites': "-Compost\n-Chipping pour mulch\n-Bois-énergie\n-Papier\n-Plastique\n-Verre\n-Métal",
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '1',
-        'name': 'Carton',
-        'description': 'Un carton est une boîte en carton ...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '2',
-        'name': 'Fer',
-        'description': 'Une feraille est un déchet métallique ...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '3',
-        'name': 'Plastique',
-        'description': 'Les plastiques sont faits de matériaux naturels comme la cellulose, le charbon...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '4',
-        'name': 'Papier',
-        'description': 'Un papier blanc est un support vierge utilisé pour écrire ou dessiner ...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    }
-]
+from app import models
 
-newspapers = [
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 2,
-        'title': "Code de l'environnement",
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://www.legifrance.gouv.fr/contenu/logo-rf',
-        'link': 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006143752/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'Version en vigueur au 14 avril 2023'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    }
-]
+with app.app_context():
+    db.drop_all()
+    db.create_all()
 
-
-@app.route('/')
-def index():
-    return render_template('index.html', wastes=wastes, title='Home', location='index')
-
-
-@app.route('/popular')
-def popular():
-    return render_template('popular.html', wastes=wastes, title='Popular', location='popular')
-
-
-@app.route('/news')
-def news():
-    return render_template('news.html', newspapers=newspapers, title='News', location='news')
-
-@app.route('/add-waste')
-def add_waste():
-    return render_template('add-waste.html', title='Add waste', location='add-waste')
-
-@app.route('/add-new')
-def add_new():
-    return render_template('add-new.html', title='Add news', location='add-news')
-
-nb = 0
-@app.route('/waste/' + str(nb))
-def waste():
-    return render_template('waste.html', waste=wastes[nb], title=wastes[nb]['name'], location='waste')
+from app import routes

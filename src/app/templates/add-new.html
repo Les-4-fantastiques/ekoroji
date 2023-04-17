@@ -13,39 +13,76 @@
         <h1>Ajouter</h1>
     </nav>
 
-    <div class="form-container">
-        <h2>Titre</h2>
-        <div>
-            <p>Nom de l'article ...</p>
-        </div>
-    </div>
+    <form method="POST" , action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-container">
+            <dir class="form-container-1">
+                {{ form.article_title.label(class="form-label") }}
+                {% if form.article_title.errors %}
+                {{ form.article_title(class="form-input") }}
+                <div class="error-message">
+                    {% for error in form.article_title.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
 
-    <div class="form-container">
-        <h2>Résumé</h2>
-        <div>
-            <p>Résumé de l'article ...</p>
-        </div>
-    </div>
+                {% else %}
+                {{ form.article_title(class="form-input") }}
 
-    <div class="form-container">
-        <h2>Image</h2>
-        <div>
-            <p>Image de l'article ...</p>
-        </div>
-    </div>
+                {% endif %}
+            </dir>
+            <dir class="form-container-2">
+                {{ form.article_content.label(class="form-label") }}
+                {% if form.article_content.errors %}
+                {{ form.article_content(class="form-input") }}
+                <div class="error-message">
+                    {% for error in form.article_content.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
 
-    <div class="form-container">
-        <h2>Lien</h2>
-        <div>
-            <p>Lien de l'article ...</p>
-        </div>
-    </div>
+                {% else %}
+                {{ form.article_content(class="form-input") }}
 
-    <div class="validation-container-new">
-        <h2>Ajouter l'article</h2>
-    </div>
+                {% endif %}
+            </dir>
+            <dir class="form-container-3">
+                {{ form.article_image.label(class="form-label") }}
+                {% if form.article_image.errors %}
+                {{ form.article_image(class="form-input") }}
+                <div class="error-message">
+                    {% for error in form.article_image.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
 
-    <div class="scroll-container-new"></div>
+                {% else %}
+                {{ form.article_image(class="form-input") }}
+
+                {% endif %}
+            </dir>
+            <dir class="form-container-4">
+                {{ form.article_link.label(class="form-label") }}
+                {% if form.article_link.errors %}
+                {{ form.article_link(class="form-input") }}
+                <div class="error-message">
+                    {% for error in form.article_link.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+                {% else %}
+                {{ form.article_link(class="form-input") }}
+
+                {% endif %}
+            </dir>
+        </fieldset>
+        <dir class="validation-container-5">
+            {{form.article_validated(class="btn-validation")}}
+        </dir>
+    </form>
+
+    <div class="scroll-container-6"></div>
 
 </div>
 {% endblock content %}
