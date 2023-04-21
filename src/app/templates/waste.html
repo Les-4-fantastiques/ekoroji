@@ -18,7 +18,7 @@
         <div class="image-refresh">
             <img src="{{ url_for('static', filename='assets/icons/Refresh_1.svg') }}" alt="Icon">
         </div>
-        <img class="image-waste" src="{{ url_for('static', filename='uploads/wastes/' + waste.id + '.png') }}"
+        <img class="image-waste" src="{{ url_for('static', filename='uploads/wastes/' + waste.name + '.png') }}"
             alt="Image">
     </div>
 
@@ -40,6 +40,18 @@
         <div class="list_recycling_possibilitites-refresh">
             <img src="{{ url_for('static', filename='assets/icons/Refresh_1.svg') }}" alt="Icon">
         </div>
+    </div>
+
+    <div class="update-waste">
+        <a href="{{ url_for('update_waste', waste_id=waste.id) }}" target="_self">
+            <h2>Modifier le déchet</h2>
+        </a>
+    </div>
+
+    <div class="delete-waste">
+        <a href="{{ url_for('delete_waste', waste_id=waste.id) }}" target="_self">
+            <h2>Supprimer le déchet</h2>
+        </a>
     </div>
 
     <div class="scroll-container-waste"></div>

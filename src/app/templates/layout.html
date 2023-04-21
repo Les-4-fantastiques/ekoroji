@@ -18,7 +18,7 @@
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             {% for category, message in messages %}
-                <div class="flash-alert">
+                <div class="flash-alert-{{category}}">
                     <h2>{{ message }}</h2>
                 </div>
             {% endfor %}
@@ -38,9 +38,9 @@
                             {% endif %}
                         </div>
                     </a></li>
-                <li><a href="{{url_for('news')}}" class="btn-news" target="_self">
+                <li><a href="{{url_for('articles')}}" class="btn-articles" target="_self">
                         <div>
-                            {% if location == 'news' %}
+                            {% if location == 'articles' %}
                             <img src="{{ url_for('static', filename='assets/icons/information_2.svg') }}" alt="Icon">
                             {% else %}
                             <img src="{{ url_for('static', filename='assets/icons/information_1.svg') }}" alt="Icon">

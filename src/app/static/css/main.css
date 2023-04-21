@@ -7,7 +7,8 @@ body {
 
 }
 
-.flash-alert {
+.flash-alert-success,
+.flash-alert-danger {
     position: fixed;
     width: 850px;
     min-height: 115px;
@@ -15,7 +16,6 @@ body {
     left: calc(50% - 850px/2);
     top: 57.5px;
     z-index: 9999;
-    background: #446127;
     box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.25);
     border-radius: 75px;
     padding: 30px;
@@ -23,7 +23,16 @@ body {
     height: auto;
 }
 
-.flash-alert h2 {
+.flash-alert-success {
+    background: #446127;
+}
+
+.flash-alert-danger {
+    background: #DC143C;
+}
+
+.flash-alert-success h2,
+.flash-alert-danger h2 {
     position: absolute;
     left: 22px;
     right: 22px;
@@ -41,10 +50,14 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+}
 
-    /* #9DE05A Vert olive */
-
+.flash-alert-success h2 {
     color: #9DE05A;
+}
+
+.flash-alert-danger h2 {
+    color: #FFFCF8;
 }
 
 .navbar,
@@ -164,7 +177,7 @@ footer ul {
     list-style: none;
 }
 
-.btn-news {
+.btn-articles {
     left: 15.28%;
     right: 71.76%;
 }

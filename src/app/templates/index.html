@@ -2,7 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/waste-container.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/add-container.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/container-new.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -13,8 +13,8 @@
         <h1>EXPLORER</h1>
     </nav>
 
-    <div class="add-container">
-        <a href="{{url_for('add_waste')}}" target="_self">
+    <div class="new-container">
+        <a href="{{url_for('waste_new')}}" target="_self">
             <h2>Ajouter un déchet</h2>
         </a>
     </div>
@@ -31,10 +31,10 @@
     {% set enumerate.index = enumerate.index + 1 %}
 
     <div class="{{ container }}">
-        <a href="#" target="_self">
+        <a href="{{ url_for('waste', waste_id=waste.id) }}" target="_self">
             <h2 class="text-container">{{ waste.name }}</h2>
             <div class="image-container">
-                <img src={{ url_for('static', filename='uploads/wastes/' + waste.id + '.png' ) }} alt="Image">
+                <img src="{{ url_for('static', filename='uploads/wastes/' + waste.name + '.png') }}" alt="Image">
             </div>
             <div style="clear:both"></div>
         </a>

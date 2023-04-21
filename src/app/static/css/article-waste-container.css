@@ -11,6 +11,10 @@
     border-radius: 75px;
 }
 
+.content-container-fixed{
+    position: absolute;
+}
+
 .text-container {
     position: absolute;
     left: 5.29%;

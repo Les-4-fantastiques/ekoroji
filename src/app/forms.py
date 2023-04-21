@@ -8,6 +8,7 @@ class WasteForm(FlaskForm):
     waste_name = StringField('Nom du déchet', validators=[
                              DataRequired(), Length(min=2, max=20)])
     waste_validated = SubmitField('Ajouter le déchet')
+
     def validate_name(self, name):
         waste = Waste.query.filter_by(name=name.data).first()
         if waste:
@@ -19,8 +20,10 @@ class ArticleForm(FlaskForm):
         DataRequired(), Length(min=2, max=50)])
     article_content = StringField('Résumé', validators=[
                                   Length(min=2, max=200)])
-    article_image = StringField('Image', validators=[DataRequired(), URL()])
-    article_link = StringField('Lien', validators=[DataRequired(), URL()])
+    article_image = StringField('Image (lien)', validators=[
+                                DataRequired(), URL()])
+    article_link = StringField('Article (lien)', validators=[
+                               DataRequired(), URL()])
     article_validated = SubmitField("Ajouter l'article")
 
     def validate_link(self, article_link):

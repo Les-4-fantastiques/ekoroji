@@ -1,0 +1,41 @@
+{%extends "layout.html"%}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/new-update.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/article-waste-container.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="div-content-site">
+    <nav class="navbar-search">
+        <div class="navbar-search-clear"></div>
+        <div class="navbar-search-blur"></div>
+        <h1>Supprimer</h1>
+    </nav>
+
+    <div class="content-container content-container-fixed">
+        <a href="#" target="_self">
+            <div class="text-container">
+                <h2>{{ waste.name }}</h2>
+                <p>{{ waste.description }}</p>
+            </div>
+            <div class="image-container">
+                <img src={{ url_for('static', filename='uploads/wastes/' + waste.name + '.png' ) }} alt="Image">
+            </div>
+            <div style="clear:both"></div>
+        </a>
+    </div>
+
+    <div class="cancel-waste">
+        <a href="{{ url_for('waste', waste_id=waste.id) }}" target="_self">
+            <h2>Annuler la suppression</h2>
+        </a>
+    </div>
+
+    <div class="delete-confirmation-waste">
+        <a href="{{ url_for('delete_waste_confirmation', waste_id=waste.id) }}" target="_self">
+            <h2>Supprimer le déchet</h2>
+        </a>
+    </div>
+</div>
+{% endblock content %}

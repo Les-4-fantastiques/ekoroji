@@ -2,7 +2,7 @@ from datetime import datetime
 from app import db
 
 
-wastes = [
+wastes_list = [
     {
         'id': '0',
         'name': 'Bois',
@@ -55,7 +55,6 @@ class Waste(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), unique=True, nullable=False)
     description = db.Column(db.Text, nullable=False)
-    image = db.Column(db.String(300), nullable=False)
     list_recycling_possibilitites = db.Column(db.Text, nullable=False)
     nb_views = db.Column(db.Integer, nullable=False, default=0)
     last_viewed = db.Column(db.DateTime, nullable=False,
@@ -65,7 +64,7 @@ class Waste(db.Model):
         return f"Waste('{self.name}', '{self.description}', '{self.image}', '{self.list_recycling_possibilitites}', '{self.nb_views}', '{self.last_viewed}')"
 
 
-newspapers = [
+articles_list = [
     {
         'id': 1,
         'title': 'Bien trier ses déchets',
@@ -152,22 +151,3 @@ class Article(db.Model):
 
     def __repr__(self):
         return f"Article('{self.title}', '{self.date}', '{self.image}', '{self.link}', '{self.nb_views}', '{self.last_viewed}', '{self.content}')"
-
-
-"""
-with app.app_context():
-    for waste in wastes:
-        waste = Waste(name=waste['name'], description=waste['description'], image=waste['image'],
-                      list_recycling_possibilitites=waste['list_recycling_possibilitites'])
-        db.session.add(waste)
-    db.session.commit()
-"""
-
-"""
-with app.app_context():
-    for article in newspapers:
-        newspaper = Article(title=article['title'], date=article['date'], image=article['image'],
-                            link=article['link'], last_viewed=datetime.utcnow(), content=article['content'])
-        db.session.add(newspaper)
-    db.session.commit()
-"""
