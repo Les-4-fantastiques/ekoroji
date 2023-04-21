@@ -15,10 +15,10 @@
 
     <div class="space-search-bar"></div>
 
-    {% for waste in wastes %}
+    {% for waste in wastes.items %}
 
     <div class="content-container">
-        <a href="#" target="_self">
+        <a href="{{ url_for('wastes.waste', waste_id=waste.id) }}" target="_self">
             <div class="text-container">
                 <h2>{{ waste.name }}</h2>
                 <p>{{ waste.description }}</p>
@@ -29,7 +29,23 @@
             <div style="clear:both"></div>
         </a>
     </div>
-
     {% endfor %}
+
+    {% if wastes.pages > 1 %}
+    <div class="page-container">
+        {% for page_num in wastes.iter_pages() %}
+        {% if page_num %}
+        {% if wastes.page == page_num %}
+        <a class="active" href="{{ url_for('wastes.popular', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+        <a class="inactive" href="{{ url_for('wastes.popular', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+        {% else %}
+        ...
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
 </div>
 {% endblock content %}

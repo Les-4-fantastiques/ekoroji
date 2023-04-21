@@ -15,7 +15,7 @@
     </nav>
 
     <div class="new-container-large">
-        <a href="{{url_for('article_new')}}" target="_self">
+        <a href="{{url_for('articles.article_new')}}" target="_self">
             <h2>Ajouter un article</h2>
         </a>
     </div>
@@ -23,7 +23,7 @@
     {% for article in articles%}
 
     <div class="content-container">
-        <a href={{article.link}} target="_blank">
+        <a href={{ url_for('articles.article', article_id=article.id) }} target="_self">
             <div class="text-container">
                 <h2>{{ article.title }}</h2>
                 <p>{{ article.content }}</p>
@@ -36,5 +36,22 @@
     </div>
 
     {% endfor %}
+
+    {% if articles.pages > 1 %}
+    <div class="page-container">
+        {% for page_num in articles.iter_pages(left_edge=2, right_edge=2, left_current=2, right_current=2) %}
+        {% if page_num %}
+        {% if articles.page == page_num %}
+        <a class="active" href="{{ url_for('articles.articles', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+        <a class="inactive" href="{{ url_for('articles.articles', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+        {% else %}
+        <h2>...</h2>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
 </div>
 {% endblock content %}

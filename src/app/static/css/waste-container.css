@@ -1,24 +1,26 @@
 .content-container-right,
 .content-container-left {
     filter: drop-shadow(8px 8px 10px #474744);
-    Width: 367.5px;
-    Height: 467px;
+    width: 34.03%;
+    height: 467px;
     margin-top: 115px;
-
+    display: inline-block;
     text-decoration: none;
     background: #F1EFE9;
     box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.25);
     border-radius: 75px;
+    vertical-align: top;
+    box-sizing: border-box;
 }
 
 .content-container-right {
-    margin-left: calc((100% - 735px)/3);
-    margin-right: calc((100% - 735px)/3 + 367.5px);
+    margin-left: 10.65%;
+    margin-right: 55.32%;
 }
 
 .content-container-left {
-    margin-left: calc((100% + 735px)/3);
-    margin-right: calc((100% + 735px)/3 + 367.5px);
+    margin-left: 55.32%;
+    margin-right: 10.65%;
 }
 
 .text-container {

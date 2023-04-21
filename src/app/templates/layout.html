@@ -29,7 +29,7 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="{{url_for('index')}}" class="btn-index" target="_self">
+                <li><a href="{{url_for('main_bp.index')}}" class="btn-index" target="_self">
                         <div>
                             {% if location == 'index' %}
                             <img src="{{ url_for('static', filename='assets/icons/search_2.svg') }}" alt="Icon">
@@ -38,7 +38,7 @@
                             {% endif %}
                         </div>
                     </a></li>
-                <li><a href="{{url_for('articles')}}" class="btn-articles" target="_self">
+                <li><a href="{{url_for('articles.articles')}}" class="btn-articles" target="_self">
                         <div>
                             {% if location == 'articles' %}
                             <img src="{{ url_for('static', filename='assets/icons/information_2.svg') }}" alt="Icon">
@@ -47,7 +47,7 @@
                             {% endif %}
                         </div>
                     </a></li>
-                <li><a href="{{url_for('popular')}}" class="btn-popular" target="_self">
+                <li><a href="{{url_for('wastes.popular')}}" class="btn-popular" target="_self">
                         <div>
                             {% if location == 'popular' %}
                             <img src="{{ url_for('static', filename='assets/icons/community_2.svg') }}" alt="Icon">

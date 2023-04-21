@@ -1,0 +1,47 @@
+.new-container-large {
+    position: absolute;
+    width: 850px;
+    height: 300px;
+    left: 115px;
+    top: 115px;
+    background: #F1EFE9;
+    border-radius: 75px;
+}
+
+.new-container-large h2 {
+    position: absolute;
+    left: 2.94%;
+    right: 2.94%;
+    top: 8.33%;
+    bottom: 69.33%;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.new-container-large p {
+    position: absolute;
+    left: 2.94%;
+    right: 2.94%;
+    top: 39%;
+    bottom: 8.33%;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #474744;
+}

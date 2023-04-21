@@ -43,13 +43,13 @@
     </div>
 
     <div class="update-waste">
-        <a href="{{ url_for('update_waste', waste_id=waste.id) }}" target="_self">
+        <a href="{{ url_for('wastes.update_waste', waste_id=waste.id) }}" target="_self">
             <h2>Modifier le déchet</h2>
         </a>
     </div>
 
     <div class="delete-waste">
-        <a href="{{ url_for('delete_waste', waste_id=waste.id) }}" target="_self">
+        <a href="{{ url_for('wastes.delete_waste', waste_id=waste.id) }}" target="_self">
             <h2>Supprimer le déchet</h2>
         </a>
     </div>

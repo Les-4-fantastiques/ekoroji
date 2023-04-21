@@ -14,26 +14,24 @@
     </nav>
 
     <div class="content-container content-container-fixed">
-        <a href="#" target="_self">
-            <div class="text-container">
-                <h2>{{ waste.name }}</h2>
-                <p>{{ waste.description }}</p>
-            </div>
-            <div class="image-container">
-                <img src={{ url_for('static', filename='uploads/wastes/' + waste.name + '.png' ) }} alt="Image">
-            </div>
-            <div style="clear:both"></div>
-        </a>
+        <div class="text-container">
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.content }}</p>
+        </div>
+        <div class="image-container">
+            <img src={{article.image}} alt="Image">
+        </div>
+        <div style="clear:both"></div>
     </div>
 
     <div class="cancel-waste">
-        <a href="{{ url_for('wastes.waste', waste_id=waste.id) }}" target="_self">
+        <a href="{{ url_for('articles.article', article_id=article.id) }}" target="_self">
             <h2>Annuler la suppression</h2>
         </a>
     </div>
 
     <div class="delete-confirmation-waste">
-        <a href="{{ url_for('wastes.delete_waste_confirmation', waste_id=waste.id) }}" target="_self">
+        <a href="{{ url_for('articles.delete_article_confirmation', article_id=article.id) }}" target="_self">
             <h2>Supprimer le déchet</h2>
         </a>
     </div>

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/waste-container.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/article-waste-container.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/container-new.css') }}">
 {% endblock %}
 
@@ -11,34 +11,69 @@
         <div class="navbar-search-clear"></div>
         <div class="navbar-search-blur"></div>
         <h1>EXPLORER</h1>
+        <form method="POST" class="search-container" , action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="search-bar">
+                <dir>
+                    {% if form.search_content.errors %}
+                    {{ form.search_content(class="form-input") }}
+                    <div class="error-message">
+                        {% for error in form.search_content.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    {% else %}
+                    {{ form.search_content(class="form-input") }}
+
+                    {% endif %}
+
+                </dir>
+            </fieldset>
+            <dir class="search-validation">
+                <img src="{{ url_for('static', filename='assets/icons/search_4.svg') }}" alt="Icon">
+                {{form.search_validated(class="btn-validation")}}
+            </dir>
+        </form>
     </nav>
 
-    <div class="new-container">
-        <a href="{{url_for('waste_new')}}" target="_self">
+    <div class="new-container-large">
+        <a href="{{url_for('wastes.waste_new')}}" target="_self">
             <h2>Ajouter un déchet</h2>
         </a>
     </div>
 
-    {% set enumerate = namespace() %}
-    {% set enumerate.index = 1 %}
+    {% for waste in wastes.items %}
 
-    {% for waste in wastes %}
-    {% if enumerate.index % 2 == 0 %}
-    {% set container = 'content-container-right' %}
-    {% else %}
-    {% set container = 'content-container-left' %}
-    {% endif %}
-    {% set enumerate.index = enumerate.index + 1 %}
-
-    <div class="{{ container }}">
-        <a href="{{ url_for('waste', waste_id=waste.id) }}" target="_self">
-            <h2 class="text-container">{{ waste.name }}</h2>
+    <div class="content-container">
+        <a href="{{ url_for('wastes.waste', waste_id=waste.id) }}" target="_self">
+            <div class="text-container">
+                <h2>{{ waste.name }}</h2>
+                <p>{{ waste.description }}</p>
+            </div>
             <div class="image-container">
-                <img src="{{ url_for('static', filename='uploads/wastes/' + waste.name + '.png') }}" alt="Image">
+                <img src={{ url_for('static', filename='uploads/wastes/' + waste.name + '.png' ) }} alt="Image">
             </div>
             <div style="clear:both"></div>
         </a>
     </div>
     {% endfor %}
+
+    {% if wastes.pages > 1 %}
+    <div class="page-container">
+        {% for page_num in wastes.iter_pages(left_edge=2, right_edge=2, left_current=2, right_current=2) %}
+        {% if page_num %}
+        {% if wastes.page == page_num %}
+        <a class="active" href="{{ url_for('main_bp.index', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+        <a class="inactive" href="{{ url_for('main_bp.index', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+        {% else %}
+        <h2>...</h2>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
 </div>
 {% endblock content %}
