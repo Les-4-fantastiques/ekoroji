@@ -1,16 +1,16 @@
-<p align="center"><img src="sources\client\assets\logos\Ekoroji_light.svg" alt="Icon" width="128"/></p>
+<p align="center"><img src="src\app\static\assets\logos\Ekoroji_light.svg" align="center" alt="Icon" width="128"/></p>
 
 ## <p align="center">Ekoroji</p>
 
-Ekoroji est une application web pour téléphone. Elle a pour but de renseigner l'utilisateur sur la manière dont recycler chaque objet, que ce soit des aliments, déchets ou autres. Elle inclut également une rubrique d'articles pour sensibiliser l'utilisateur.
+<p align="center">Ekoroji est une application web qui vous permet de rechercher des informations sur les déchets et les articles. Cette application est construite en utilisant Flask et l'API OpenAI.</p>
 
 
 ## <p align="center">Auteur(e)s</p>
 
+- [@untypequicode](https://github.com/untypequicode) manager | python developer
 - [@ambre66160](https://github.com/ambre66160) web developer
 - @benoiurlc database manager
 - @ghostizzoks python developer
-- [@untypequicode](https://github.com/untypequicode) python developer
 
 
 ## <p align="center">Documentation</p>
