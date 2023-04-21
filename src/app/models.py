@@ -2,56 +2,17 @@ from datetime import datetime
 from app import db
 
 
-wastes_list = [
-    {
-        'id': '0',
-        'name': 'Bois',
-        'description': 'Le bois est arbre ...',
-        'image': '',
-        'list_recycling_possibilitites': "-Compost\n-Chipping pour mulch\n-Bois-énergie\n-Papier\n-Plastique\n-Verre\n-Métal",
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '1',
-        'name': 'Carton',
-        'description': 'Un carton est une boîte en carton ...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '2',
-        'name': 'Fer',
-        'description': 'Une feraille est un déchet métallique ...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '3',
-        'name': 'Plastique',
-        'description': 'Les plastiques sont faits de matériaux naturels comme la cellulose, le charbon...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    },
-    {
-        'id': '4',
-        'name': 'Papier',
-        'description': 'Un papier blanc est un support vierge utilisé pour écrire ou dessiner ...',
-        'image': '',
-        'list_recycling_possibilitites': '',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-    }
-]
-
-
 class Waste(db.Model):
+    """Classe pour représenter les déchets dans la base de données
+
+    Attributes:
+        id (int): identifiant unique du déchet
+        name (str): nom du déchet
+        description (str): description du déchet
+        list_recycling_possibilitites (str): liste des possibilités de recyclage pour ce déchet
+        nb_views (int): nombre de vues de la page associée à ce déchet
+        last_viewed (datetime): date de la dernière vue de la page associée à ce déchet
+    """
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), unique=True, nullable=False)
     description = db.Column(db.Text, nullable=False)
@@ -61,87 +22,30 @@ class Waste(db.Model):
                             default=datetime.utcnow)
 
     def __repr__(self):
+        """Représentation du déchet sous forme de chaîne de caractères
+
+        Returns:
+            str: chaîne de caractères représentant le déchet
+        """
         return f"Waste('{self.name}', '{self.description}', '{self.image}', '{self.list_recycling_possibilitites}', '{self.nb_views}', '{self.last_viewed}')"
 
 
-articles_list = [
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 2,
-        'title': "Code de l'environnement",
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://www.legifrance.gouv.fr/contenu/logo-rf',
-        'link': 'https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000006143752/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'Version en vigueur au 14 avril 2023'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    },
-    {
-        'id': 1,
-        'title': 'Bien trier ses déchets',
-        'date': '2020-01-01 00:00:00',
-        'image': 'https://web.citeo.guidedutri.fr/assets/images/citeo_retouch.jpg',
-        'link': 'http://www.siredom.com/vos-dechets-au-quotidien/bien-trier-ses-dechets/',
-        'nb_views': 0,
-        'last_viewed': '2020-01-01 00:00:00',
-        'content': 'D’une commune à l’autre, les dispositifs et modes de collecte des déchets changent.'
-    }
-]
-
-
 class Article(db.Model):
+    """Classe pour représenter les articles dans la base de données
+
+    Attributes:
+        id (int): identifiant unique de l'article
+        title (str): titre de l'article
+        date (datetime): date de publication de l'article
+        image (str): URL de l'image associée à l'article
+        link (str): lien vers l'article
+        nb_views (int): nombre de vues de la page associée à l'article
+        last_viewed (datetime): date de la dernière vue de la page associée à l'article
+        content (str): contenu de l'article
+    """
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
-    date = db.Column(db.DateTime) #nullable=False
+    date = db.Column(db.DateTime)  # nullable=False
     image = db.Column(db.String(300), nullable=False)
     link = db.Column(db.String(300), unique=True, nullable=False)
     nb_views = db.Column(db.Integer, nullable=False, default=0)
@@ -150,4 +54,9 @@ class Article(db.Model):
     content = db.Column(db.Text, nullable=False)
 
     def __repr__(self):
+        """Représentation de l'article sous forme de chaîne de caractères
+
+        Returns:
+            str: chaîne de caractères représentant l'article
+        """
         return f"Article('{self.title}', '{self.date}', '{self.image}', '{self.link}', '{self.nb_views}', '{self.last_viewed}', '{self.content}')"

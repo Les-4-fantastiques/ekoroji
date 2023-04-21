@@ -49,7 +49,11 @@
         <a href="{{ url_for('wastes.waste', waste_id=waste.id) }}" target="_self">
             <div class="text-container">
                 <h2>{{ waste.name }}</h2>
+                {% if waste.description[:130] !=  waste.description[:131] %}
+                <p>{{ waste.description[:130] + ' ...' }}</p>
+                {% else %}
                 <p>{{ waste.description }}</p>
+                {% endif %}
             </div>
             <div class="image-container">
                 <img src={{ url_for('static', filename='uploads/wastes/' + waste.name + '.png' ) }} alt="Image">

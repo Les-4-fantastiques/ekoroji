@@ -15,9 +15,6 @@
 
     <div class="image-container">
         <h2>Image</h2>
-        <div class="image-refresh">
-            <img src="{{ url_for('static', filename='assets/icons/Refresh_1.svg') }}" alt="Icon">
-        </div>
         <img class="image-waste" src="{{ url_for('static', filename='uploads/wastes/' + waste.name + '.png') }}"
             alt="Image">
     </div>
@@ -25,21 +22,31 @@
     <div class="description-container">
         <h2>Description</h2>
         <p>
-            {{waste.description}}
+            {% if waste.description[:400] != waste.description[:401] %}
+        <p>{{ waste.description[:400] + ' ...' }}</p>
+        {% else %}
+        <p>{{ waste.description }}</p>
+        {% endif %}
         </p>
-        <div class="description-refresh">
-            <img src="{{ url_for('static', filename='assets/icons/Refresh_1.svg') }}" alt="Icon">
-        </div>
     </div>
 
     <div class="list_recycling_possibilitites-container">
         <h2>Recycler</h2>
         <p>
-            {{waste.list_recycling_possibilitites}}
+            {% if waste.list_recycling_possibilitites[:150] != waste.list_recycling_possibilitites[:151] %}
+            {% for item in waste.list_recycling_possibilitites[:150].split("\n") %}
+            {{ item }}<br>
+            {% endfor %}...
+            {% else %}
+            {% for item in waste.list_recycling_possibilitites.split("\n") %}
+            {{ item }}<br>
+            {% endfor %}
+            {% endif %}
         </p>
-        <div class="list_recycling_possibilitites-refresh">
-            <img src="{{ url_for('static', filename='assets/icons/Refresh_1.svg') }}" alt="Icon">
-        </div>
+
+        <a href="{{ url_for('wastes.waste_details', waste_id=waste.id) }}" class="list_recycling_possibilitites-refresh" target="_self">
+            <img src="{{ url_for('static', filename='assets/icons/show_0.svg') }}" alt="Icon">
+        </a>
     </div>
 
     <div class="update-waste">

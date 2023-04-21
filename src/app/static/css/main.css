@@ -8,7 +8,7 @@ body {
 }
 
 .flash-alert-success,
-.flash-alert-danger {
+.flash-alert-danger, .flash-alert-warning {
     position: fixed;
     width: 850px;
     min-height: 115px;
@@ -31,8 +31,12 @@ body {
     background: #DC143C;
 }
 
+.flash-alert-warning {
+    background: #FFA500;
+}
+
 .flash-alert-success h2,
-.flash-alert-danger h2 {
+.flash-alert-danger h2, .flash-alert-warning h2 {
     position: absolute;
     left: 22px;
     right: 22px;
@@ -59,6 +63,10 @@ body {
 .flash-alert-danger h2 {
     color: #FFFCF8;
 }
+
+.flash-alert-warning h2 {
+    color: #000000;
+    }
 
 .navbar,
 .navbar-search {

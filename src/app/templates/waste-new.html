@@ -2,6 +2,7 @@
 
 {% block head%}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/new-update.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/waste.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -37,5 +38,11 @@
             {{form.waste_validated(class="btn-validation")}}
         </dir>
     </form>
+
+    {% if legend == "Modifier" %}
+    <a class="back-container" href="{{ url_for('wastes.waste', waste_id=waste.id) }}" target="_self">
+        <img src="{{ url_for('static', filename='assets/icons/back_0.svg') }}" alt="back">
+    </a>
+    {% endif %}
 </div>
 {% endblock content %}

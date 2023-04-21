@@ -2,7 +2,8 @@
 .description-container,
 .list_recycling_possibilitites-container,
 .delete-waste,
-.update-waste {
+.update-waste,
+.details-container {
     position: absolute;
     left: 10.65%;
     right: 10.65%;
@@ -18,14 +19,21 @@
     top: 730px;
 }
 
+.details-container {
+    height: 318px;
+    top: 115px;
+}
+
 .list_recycling_possibilitites-container {
-    height: 350px;
-    top: 1163px;
+    min-height: 350px;
+    display: inline-block;
+    margin-top: 1163px;
 }
 
 .image-container h2,
 .description-container h2,
-.list_recycling_possibilitites-container h2 {
+.list_recycling_possibilitites-container h2,
+.details-container h2 {
     position: absolute;
     height: 67px;
     left: 0px;
@@ -46,12 +54,11 @@
 }
 
 .description-container h2,
-.list_recycling_possibilitites-container h2 {
+.list_recycling_possibilitites-container h2,
+.details-container h2 {
     width: 253px;
 }
 
-.image-refresh,
-.description-refresh,
 .list_recycling_possibilitites-refresh {
     position: absolute;
     width: 235px;
@@ -61,21 +68,12 @@
     justify-content: center;
 }
 
-.image-refresh {
-    height: 318px;
-    left: 0px;
-    bottom: 0px;
-}
-
-.description-refresh,
 .list_recycling_possibilitites-refresh {
     right: 0px;
     top: 0%;
     bottom: 0%;
 }
 
-.image-refresh img,
-.description-refresh img,
 .list_recycling_possibilitites-refresh img {
     align-self: center;
     position: absolute;
@@ -95,16 +93,29 @@
 }
 
 .description-container p,
+.details-container p {
+    left: 0%;
+    right: 0%;
+    top: 39.31%;
+    bottom: 0%;
+}
+
 .list_recycling_possibilitites-container p {
-    position: absolute;
     left: 0%;
     right: 41.53%;
     top: 39.31%;
     bottom: 0%;
+}
+
+.description-container p,
+.list_recycling_possibilitites-container p,
+.details-container p {
+    position: absolute;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
+    text-align: justify;
     line-height: 35px;
     color: #474744;
 }
@@ -154,6 +165,24 @@
 
 .update-waste h2 {
     color: #9DE05A;
+}
+
+.back-container {
+    position: fixed;
+    width: 115px;
+    height: 115px;
+    left: 115px;
+    bottom: 375px;
+    background: #446127;
+    box-shadow: 0px 11px 11px rgba(0, 0, 0, 0.25);
+    border-radius: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-container img {
+    height: 55%;
 }
 
 .scroll-container-waste {
