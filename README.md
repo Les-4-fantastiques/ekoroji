@@ -81,8 +81,8 @@ L'application Ekoroji permet de :
 ## Galerie d'images
 <center>
 <p float="left">
-  <img src="doc\img\Ekoroji_app_explorer.png" width="30%" />
-  <img src="doc\img\Ekoroji_app_informer.png" width="30%" /> 
-  <img src="doc\img\Ekoroji_app_scans.png" width="30%" />
+  <img src="doc/img/Ekoroji_app_explorer.png" width="30%" />
+  <img src="doc/img/Ekoroji_app_informer.png" width="30%" /> 
+  <img src="doc/img/Ekoroji_app_scans.png" width="30%" />
 </p>
 </center>
