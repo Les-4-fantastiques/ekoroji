@@ -8,7 +8,8 @@ body {
 }
 
 .flash-alert-success,
-.flash-alert-danger, .flash-alert-warning {
+.flash-alert-danger,
+.flash-alert-warning {
     position: fixed;
     width: 850px;
     min-height: 115px;
@@ -36,7 +37,8 @@ body {
 }
 
 .flash-alert-success h2,
-.flash-alert-danger h2, .flash-alert-warning h2 {
+.flash-alert-danger h2,
+.flash-alert-warning h2 {
     position: absolute;
     left: 22px;
     right: 22px;
@@ -66,7 +68,7 @@ body {
 
 .flash-alert-warning h2 {
     color: #000000;
-    }
+}
 
 .navbar,
 .navbar-search {
@@ -187,7 +189,7 @@ body {
     margin: auto;
 }
 
-.search-bar .form-input:focus{
+.search-bar .form-input:focus {
     background: #F1EFE9;
 }
 
@@ -316,4 +318,44 @@ footer a div {
 .page-container a.inactive,
 .page-container h2 {
     color: #9DE05A;
+}
+
+.scroll-container-3 {
+    position: absolute;
+    width: 100%;
+    height: 375px;
+    left: 0px;
+    top: 830px;
+}
+
+.scroll-container-4 {
+    position: absolute;
+    width: 100%;
+    height: 375px;
+    left: 0px;
+    top: 1245px;
+}
+
+.scroll-container-5 {
+    position: absolute;
+    width: 100%;
+    height: 375px;
+    left: 0px;
+    top: 1660px;
+}
+
+.scroll-container-6 {
+    position: absolute;
+    width: 100%;
+    height: 375px;
+    left: 0px;
+    top: 2075px;
+}
+
+.scroll-container-7 {
+    position: absolute;
+    width: 100%;
+    height: 375px;
+    left: 0px;
+    top: 2490px;
 }

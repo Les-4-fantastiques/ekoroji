@@ -71,7 +71,7 @@ L'application Ekoroji permet de :
 
 ## Contributeurs
 
-- [@untypequicode](https://github.com/untypequicode) : manager | développeur Python  
+- [@untypequicode](https://github.com/untypequicode) : manager | développeur Python | développeur web
 - [@ambre66160](https://github.com/ambre66160) : développeuse web
 - [@benoiurlc](#) : responsable de base de données
 - [@ghostizzoks](#) : développeur Python
