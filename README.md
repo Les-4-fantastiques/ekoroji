@@ -80,9 +80,23 @@ L'application Ekoroji permet de :
 
 ## Galerie d'images
 <center>
+<h4>Les pages principales</h4>
 <p float="left">
-  <img src="doc/img/Ekoroji_app_explorer.png" width="30%" />
-  <img src="doc/img/Ekoroji_app_informer.png" width="30%" /> 
-  <img src="doc/img/Ekoroji_app_scans.png" width="30%" />
+  <img src="doc/img/Ekoroji_articles.png" width="32%" />
+  <img src="doc/img/Ekoroji_index.png" width="32%" /> 
+  <img src="doc/img/Ekoroji_index.png" width="32%" />
+</p>
+<h4>Les déchets</h4>
+<p float="left">
+  <img src="doc/img/Ekoroji_waste-new.png" width="24%" />
+  <img src="doc/img/Ekoroji_waste.png" width="24%" /> 
+  <img src="doc/img/Ekoroji_waste-details.png" width="24%" />
+  <img src="doc/img/Ekoroji_waste-delete.png" width="24%" />
+</p>
+<h4>Les articles</h4>
+<p float="left">
+  <img src="doc/img/Ekoroji_article-new.png" width="32%" />
+  <img src="doc/img/Ekoroji_article.png" width="32%" /> 
+  <img src="doc/img/Ekoroji_article-delete.png" width="32%" />
 </p>
 </center>
