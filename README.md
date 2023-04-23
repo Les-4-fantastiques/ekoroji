@@ -24,7 +24,7 @@
 
 # Ekoroji
 
-Ekoroji est une application web qui permet de rechercher des informations sur les déchets et les articles. Elle utilise Flask et l'API OpenAI pour offrir des fonctionnalités de recherche et de gestion d'articles.
+Ekoroji est une application web pour rechercher des informations sur les déchets, construite en utilisant Flask et l'API OpenAI. Elle permet de trouver des informations sur les déchets et de rechercher des déchets à l'aide d'un formulaire de recherche. Les utilisateurs peuvent ajouter, modifier et supprimer des déchets dans la base de données. Avec Ekoroji, vous pouvez prendre des décisions éclairées sur la gestion de vos déchets, contribuant ainsi à la protection de l'environnement.
 
 ---
 
