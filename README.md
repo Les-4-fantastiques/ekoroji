@@ -21,6 +21,15 @@
 
 ---
 
+<div align="center">
+<video width="320" height="240" controls>
+  <source src="doc/video/Ekoroji.mp4" type="video/mp4">
+  Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
+</video>
+</div>
+
+---
+
 # Ekoroji
 
 Ekoroji est une application web conçue pour simplifier la recherche et la gestion des déchets. Elle est construite en utilisant le framework Flask et l'API OpenAI pour fournir des informations précises et fiables sur les différents types de déchets. Les utilisateurs peuvent rechercher des déchets spécifiques à l'aide d'un formulaire de recherche convivial et trouver des informations détaillées sur leur gestion, leur recyclage, leur réutilisation et leur élimination.
