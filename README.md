@@ -1,11 +1,32 @@
+<div class="banner", align="center">
+  <img src="src/app/static/assets/logos/Ekoroji_light.svg" alt="Logo de Ekoroji" width="150" height="150" align="center">
+</div>
 
-<p align="center">
-  <img src="src/app/static/assets/logos/Ekoroji_light.svg" alt="Logo de Ekoroji" width="100" height="100" align="left">
-</p>
+---
+
+<div align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/Les-4-fantastiques/Ekoroji?style=for-the-badge">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Les-4-fantastiques/Ekoroji?style=for-the-badge">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Les-4-fantastiques/Ekoroji?style=for-the-badge">
+</div>
+<br>
+<div align="center">
+  <img alt="Python" src="https://img.shields.io/badge/-Python-FFD43B?logo=python&logoColor=306998&style=for-the-badge">
+  <img alt="Flask" src="https://img.shields.io/badge/-Flask-000000?logo=flask&logoColor=FFFFFF&style=for-the-badge">
+  <img alt="SQLAlchemy" src="https://img.shields.io/badge/-SQLALCHEMY-cd2103?logo=sqlite&logoColor=ebebeb&style=for-the-badge">
+  <img alt="OpenAI API" src="https://img.shields.io/badge/-OPENAI%20API-1ea47f?logo=openai&logoColor=FFFFFF&style=for-the-badge">
+  <img alt="HTML 5" src="https://img.shields.io/badge/-HTML5-F06529?logo=html5&logoColor=FFFFFF&style=for-the-badge">
+  <img alt="CSS 3" src="https://img.shields.io/badge/-CSS%203-2965f1?logo=css3&logoColor=FFFFFF&style=for-the-badge">
+</div>
+
+---
+
 
 # Ekoroji
 
 Ekoroji est une application web qui permet de rechercher des informations sur les déchets et les articles. Elle utilise Flask et l'API OpenAI pour offrir des fonctionnalités de recherche et de gestion d'articles.
+
+---
 
 ## Technologies utilisées
 
@@ -15,6 +36,7 @@ Ekoroji est construite en utilisant les technologies suivantes :
 - Flask
 - L'API OpenAI
 
+---
 
 ## Configuration de la clé d'API OpenAI
 
@@ -42,23 +64,25 @@ Maintenant, vous êtes prêt à exécuter Ekoroji en utilisant votre clé d'API 
 
 1. Cloner le projet Ekoroji depuis GitHub en utilisant la commande suivante :
     ``` bash
-    git clone https://github.com/Les-4-fantastiques/ekoroji.git
+    >>> git clone https://github.com/Les-4-fantastiques/ekoroji.git
     ```
 2. Naviguez vers le répertoire du projet avec la commande :
     ``` bash
-    cd ekoroji
+    >>> cd ekoroji
     ```
 3. Installez les bibliothèques requises avec la commande suivante :
     ``` bash
-    pip install -r requirements.txt
+    >>> pip install -r requirements.txt
     ```
 4. Vous pouvez maintenant exécuter l'application avec la commande suivante :
     ``` bash
-    python run.py
+    >>> python run.py
     ```
 5. Ouvrez votre navigateur et accédez à l'adresse http://localhost:5000 pour voir l'application Ekoroji en action.
 
 Assurez-vous d'avoir Python 3.x installé sur votre système avant de commencer. Si ce n'est pas le cas, téléchargez-le depuis le site officiel de Python et installez-le.
+
+---
 
 ## Fonctionnalités de l'application
 
@@ -69,6 +93,8 @@ L'application Ekoroji permet de :
 - Affichage de la liste des articles.
 - Recherche d'articles à l'aide d'un formulaire de recherche.
 
+---
+
 ## Contributeurs
 
 - [@untypequicode](https://github.com/untypequicode) : manager | développeur Python | développeur web
@@ -76,7 +102,7 @@ L'application Ekoroji permet de :
 - [@benoiurlc](#) : responsable de base de données
 - [@ghostizzoks](#) : développeur Python
 
-
+---
 
 ## Galerie d'images
 <center>
