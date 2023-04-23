@@ -31,6 +31,8 @@ En plus de cela, Ekoroji propose des fonctionnalités de filtrage des résultats
 
 En somme, Ekoroji est une application web pratique et complète pour la recherche et la gestion des déchets. Elle fournit des informations fiables et précises sur les différents types de déchets, tout en permettant aux utilisateurs de contribuer à la base de données et de trouver des informations spécifiques selon leurs besoins. Ekoroji encourage les utilisateurs à adopter une approche responsable dans la gestion de leurs déchets et à contribuer à la protection de l'environnement.
 
+[La vidéo de présentation](https://youtu.be/ZPgcD9z6ZF8)
+
 ---
 
 ## Technologies utilisées
