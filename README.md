@@ -83,7 +83,7 @@ Maintenant, vous êtes prêt à exécuter Ekoroji en utilisant votre clé d'API 
     ```
 4. Vous pouvez maintenant exécuter l'application avec la commande suivante :
     ``` bash
-    >>> python run.py
+    >>> python src/run.py
     ```
 5. Ouvrez votre navigateur et accédez à l'adresse http://localhost:5000 pour voir l'application Ekoroji en action.
 
