@@ -144,6 +144,9 @@ L'application Ekoroji permet de :
 - [@ambre66160](https://github.com/ambre66160) : développeuse web
 - [@benoiurlc](#) : responsable de base de données
 - [@ghostizzoks](#) : développeur Python
+<center>
+<img src="doc/img/Les-4-Fantastiques.png" width="75%" />
+</center>
 
 ---
 
