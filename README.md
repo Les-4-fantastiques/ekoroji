@@ -78,7 +78,7 @@ En somme, Ekoroji est une application web pratique et complète pour la recherch
 
 Avant de pouvoir exécuter Ekoroji, il est important de noter que nous utilisons l'API OpenAI. Pour cela vous devez configurer votre clé d'API OpenAI. Voici les étapes à suivre :
 
-> ⚠️ **:** L'utilisation de l'API OpenAI n'est pas obligatoire pour ce projet, cependant elle est nécessaire pour utiliser les fonctionnalités de génération de texte et d'image. Si vous ne souhaitez pas utiliser l'API OpenAI, vous pouvez passer à l'étape suivante.
+> ⚠️ **:** L'utilisation de l'API OpenAI n'est pas obligatoire pour ce projet, cependant elle est nécessaire pour utiliser les fonctionnalités de génération de texte et d'image. Si vous ne souhaitez pas utiliser l'API OpenAI, vous pouvez passer à l'étape [suivante](#exécution-de-l'application).
 
 > 🗒️ **:** Si vous ne possédez pas de clé d'API OpenAI, vous pouvez en obtenir une gratuitement en suivant les instructions ci-dessous.
 
@@ -130,10 +130,10 @@ Maintenant, vous êtes prêt à exécuter Ekoroji en utilisant votre clé d'API 
 
 L'application Ekoroji permet de :
 
-- Recherche d'informations sur les déchets en utilisant l'API OpenAI.
-- Ajout, modification et suppression d'articles.
-- Affichage de la liste des articles.
-- Recherche d'articles à l'aide d'un formulaire de recherche.
+- Rechercher des informations sur les déchets en utilisant l'API OpenAI.
+- Ajouter, modifier et supprimer des articles.
+- Afficher la liste des articles.
+- Rechercher les déchets à l'aide d'un formulaire de recherche.
 
 ---
 
@@ -152,21 +152,21 @@ L'application Ekoroji permet de :
 <center>
 <h4>Les pages principales</h4>
 <p float="left">
-  <img src="doc/img/Ekoroji_articles.png" width="32%" />
-  <img src="doc/img/Ekoroji_index.png" width="32%" /> 
-  <img src="doc/img/Ekoroji_popular.png" width="32%" />
+  <img src="doc/img/Ekoroji_articles_2.png" width="32%" />
+  <img src="doc/img/Ekoroji_index_2.png" width="32%" /> 
+  <img src="doc/img/Ekoroji_popular_2.png" width="32%" />
 </p>
 <h4>Les déchets</h4>
 <p float="left">
   <img src="doc/img/Ekoroji_waste-new.png" width="24%" />
-  <img src="doc/img/Ekoroji_waste.png" width="24%" /> 
-  <img src="doc/img/Ekoroji_waste-details.png" width="24%" />
-  <img src="doc/img/Ekoroji_waste-delete.png" width="24%" />
+  <img src="doc/img/Ekoroji_waste_2.png" width="24%" /> 
+  <img src="doc/img/Ekoroji_waste-details_2.png" width="24%" />
+  <img src="doc/img/Ekoroji_waste-delete_2.png" width="24%" />
 </p>
 <h4>Les articles</h4>
 <p float="left">
   <img src="doc/img/Ekoroji_article-new.png" width="32%" />
-  <img src="doc/img/Ekoroji_article.png" width="32%" /> 
-  <img src="doc/img/Ekoroji_article-delete.png" width="32%" />
+  <img src="doc/img/Ekoroji_article_2.png" width="32%" /> 
+  <img src="doc/img/Ekoroji_article-delete_2.png" width="32%" />
 </p>
 </center>
