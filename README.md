@@ -1,5 +1,5 @@
 <div class="banner", align="center">
-  <img src="doc/img/Ekoroji_light.svg" alt="Logo de Ekoroji" width="150" height="150" align="center">
+  <img src="doc/img/logo/Ekoroji_light.svg" alt="Logo de Ekoroji" width="150" height="150" align="center">
 </div>
 
 ---
@@ -155,21 +155,21 @@ L'application Ekoroji permet de :
 <center>
 <h4>Les pages principales</h4>
 <p float="left">
-  <img src="doc/img/Ekoroji_articles_2.png" width="32%" />
-  <img src="doc/img/Ekoroji_index_2.png" width="32%" /> 
-  <img src="doc/img/Ekoroji_popular_2.png" width="32%" />
+  <img src="doc/img/galerie/Ekoroji_articles_2.png" width="32%" />
+  <img src="doc/img/galerie/Ekoroji_index_2.png" width="32%" /> 
+  <img src="doc/img/galerie/Ekoroji_popular_2.png" width="32%" />
 </p>
 <h4>Les déchets</h4>
 <p float="left">
-  <img src="doc/img/Ekoroji_waste-new.png" width="24%" />
-  <img src="doc/img/Ekoroji_waste_2.png" width="24%" /> 
-  <img src="doc/img/Ekoroji_waste-details_2.png" width="24%" />
-  <img src="doc/img/Ekoroji_waste-delete_2.png" width="24%" />
+  <img src="doc/img/galerie/Ekoroji_waste-new.png" width="24%" />
+  <img src="doc/img/galerie/Ekoroji_waste_2.png" width="24%" /> 
+  <img src="doc/img/galerie/Ekoroji_waste-details_2.png" width="24%" />
+  <img src="doc/img/galerie/Ekoroji_waste-delete_2.png" width="24%" />
 </p>
 <h4>Les articles</h4>
 <p float="left">
-  <img src="doc/img/Ekoroji_article-new.png" width="32%" />
-  <img src="doc/img/Ekoroji_article_2.png" width="32%" /> 
-  <img src="doc/img/Ekoroji_article-delete_2.png" width="32%" />
+  <img src="doc/img/galerie/Ekoroji_article-new.png" width="32%" />
+  <img src="doc/img/galerie/Ekoroji_article_2.png" width="32%" /> 
+  <img src="doc/img/galerie/Ekoroji_article-delete_2.png" width="32%" />
 </p>
 </center>
