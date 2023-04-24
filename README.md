@@ -117,7 +117,7 @@ L'application Ekoroji permet de :
 <p float="left">
   <img src="doc/img/Ekoroji_articles.png" width="32%" />
   <img src="doc/img/Ekoroji_index.png" width="32%" /> 
-  <img src="doc/img/Ekoroji_index.png" width="32%" />
+  <img src="doc/img/Ekoroji_popular.png" width="32%" />
 </p>
 <h4>Les déchets</h4>
 <p float="left">
