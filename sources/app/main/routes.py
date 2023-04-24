@@ -2,7 +2,7 @@ from flask import render_template, request, Blueprint
 from app.main.forms import SearchForm
 from app.models import Waste
 
-main_bp = Blueprint('main_bp', __name__)
+main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/', methods=['GET', 'POST'])
 def index():

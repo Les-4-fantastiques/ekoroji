@@ -139,6 +139,12 @@
     border-radius: 75px;
 }
 
+.btn-validation:active
+{
+    background-color: #9DE05A;
+    color: #446127;
+}
+
 .cancel-waste h2,
 .delete-confirmation-waste h2 {
     position: absolute;

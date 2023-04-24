@@ -5,7 +5,7 @@ from app.models import Waste
 
 class WasteForm(FlaskForm):
     waste_name = StringField('Nom du déchet', validators=[
-                             DataRequired(), Length(min=2, max=20)])
+                             DataRequired(), Length(min=2, max=49)])
     waste_validated = SubmitField('Ajouter le déchet')
 
     def validate_name(self, name):

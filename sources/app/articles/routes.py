@@ -82,4 +82,4 @@ def delete_article_confirmation(article_id):
     db.session.delete(article)
     db.session.commit()
     flash('Le déchet a été supprimé !', 'success')
-    return redirect(url_for('articles_bp.articles'))
+    return redirect(url_for('articles.articles'))

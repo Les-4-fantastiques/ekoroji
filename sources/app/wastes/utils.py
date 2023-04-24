@@ -1,3 +1,4 @@
+import time
 from app.openai.openai_waste import WasteOpenAI
 from flask import current_app, url_for
 import os
@@ -19,8 +20,9 @@ def get_waste_info(name):
 
     # Récupérer la description et la liste des manières pour le recycler
     recycling_instructions = waste.getRecyclingInstructions()
+    time.sleep(1.1)
     description = waste.getDescription()
-
+    time.sleep(1.1)
     # Télécharger l'image correspondante
     images = waste.getPictures()
     if len(images) > 0:

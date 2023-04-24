@@ -5,7 +5,7 @@ from app.models import Article
 
 class ArticleForm(FlaskForm):
     article_title = StringField('Titre', validators=[
-        DataRequired(), Length(min=2, max=50)])
+        DataRequired(), Length(min=2, max=74)])
     article_content = StringField('Résumé', validators=[
                                   Length(min=2, max=200)])
     article_image = StringField('Image (lien)', validators=[

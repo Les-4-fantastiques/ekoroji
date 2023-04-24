@@ -68,9 +68,9 @@
         {% for page_num in wastes.iter_pages(left_edge=2, right_edge=2, left_current=2, right_current=2) %}
         {% if page_num %}
         {% if wastes.page == page_num %}
-        <a class="active" href="{{ url_for('main_bp.index', page=page_num) }}">{{ page_num }}</a>
+        <a class="active" href="{{ url_for('main.index', page=page_num) }}">{{ page_num }}</a>
         {% else %}
-        <a class="inactive" href="{{ url_for('main_bp.index', page=page_num) }}">{{ page_num }}</a>
+        <a class="inactive" href="{{ url_for('main.index', page=page_num) }}">{{ page_num }}</a>
         {% endif %}
         {% else %}
         <h2>...</h2>

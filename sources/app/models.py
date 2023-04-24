@@ -14,7 +14,7 @@ class Waste(db.Model):
         last_viewed (datetime): date de la dernière vue de la page associée à ce déchet
     """
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True, nullable=False)
+    name = db.Column(db.String(50), unique=True, nullable=False)
     description = db.Column(db.Text, nullable=False)
     list_recycling_possibilitites = db.Column(db.Text, nullable=False)
     nb_views = db.Column(db.Integer, nullable=False, default=0)
@@ -44,7 +44,7 @@ class Article(db.Model):
         content (str): contenu de l'article
     """
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50), nullable=False)
+    title = db.Column(db.String(75), nullable=False)
     date = db.Column(db.DateTime)  # nullable=False
     image = db.Column(db.String(300), nullable=False)
     link = db.Column(db.String(300), unique=True, nullable=False)
