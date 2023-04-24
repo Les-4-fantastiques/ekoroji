@@ -15,7 +15,7 @@ class WasteOpenAI:
         """
         self.__m_name = name
         key_api = KeyEncryption()
-        with open('src/app/openai/key_api.txt', 'r') as file:
+        with open('sources/app/openai/key_api.txt', 'r') as file:
             key_api.setKeyEncrypted(file.read())
         self.url_image = "https://openai80.p.rapidapi.com/images/generations"
         self.url_chat = "https://openai80.p.rapidapi.com/chat/completions"
