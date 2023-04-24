@@ -135,6 +135,7 @@ L'application Ekoroji permet de :
 - Ajouter, modifier et supprimer des articles.
 - Afficher la liste des articles.
 - Rechercher les déchets à l'aide d'un formulaire de recherche.
+> 🗒️ **:** Le site web n'a pas d'accès différent selon le rôle de l'utilisateur. Tous les utilisateurs peuvent ajouter, modifier et supprimer des articles.
 
 ---
 
