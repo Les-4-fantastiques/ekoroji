@@ -21,6 +21,8 @@ def waste_new():
     if form.validate_on_submit():
         name = Waste.query.filter_by(name=form.waste_name.data.lower()).first()
         if not name:
+            flash(
+                    f"Requête en cours... !", 'warning')
             description, list_recycling_possibilitites = get_waste_info(
                 form.waste_name.data.lower())
             waste = Waste(name=form.waste_name.data.lower(), description=description,

@@ -18,8 +18,8 @@ def get_waste_info(name):
     waste = WasteOpenAI(name)
 
     # Récupérer la description et la liste des manières pour le recycler
-    description = waste.getDescription()
     recycling_instructions = waste.getRecyclingInstructions()
+    description = waste.getDescription()
 
     # Télécharger l'image correspondante
     images = waste.getPictures()

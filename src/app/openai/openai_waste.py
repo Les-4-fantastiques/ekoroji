@@ -79,13 +79,13 @@ class WasteOpenAI:
             pass
         return request_value
     
-    def getRecyclingInstructions(self):
-        self.recycling_instructions = self.__getRequest(f'Pouvez-vous générer une liste de 5 façons de recycler cet(te) {self.__m_name} ?')
-        return self.recycling_instructions
-    
     def getDescription(self):
         self.description = self.__getRequest(f"Donnez une définition ou une description courte de 150 lettres de l'objet suivant : {self.__m_name}")
         return self.description
+    
+    def getRecyclingInstructions(self):
+        self.recycling_instructions = self.__getRequest(f'Pouvez-vous générer une liste de 5 façons de recycler cet(te) {self.__m_name} ?')
+        return self.recycling_instructions
     
     def getName(self):
         return self.__m_name
