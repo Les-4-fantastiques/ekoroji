@@ -1,5 +1,5 @@
 <div class="banner", align="center">
-  <img src="src/app/static/assets/logos/Ekoroji_light.svg" alt="Logo de Ekoroji" width="150" height="150" align="center">
+  <img src="sources/app/static/assets/logos/Ekoroji_light.svg" alt="Logo de Ekoroji" width="150" height="150" align="center">
 </div>
 
 ---
@@ -83,7 +83,7 @@ Maintenant, vous êtes prêt à exécuter Ekoroji en utilisant votre clé d'API 
     ```
 4. Vous pouvez maintenant exécuter l'application avec la commande suivante :
     ``` bash
-    >>> python src/run.py
+    >>> python sources/run.py
     ```
 5. Ouvrez votre navigateur et accédez à l'adresse http://localhost:5000 pour voir l'application Ekoroji en action.
 
