@@ -39,12 +39,12 @@
         </dir>
     </form>
 
+    <div class="scroll-container-3"></div>
+
     {% if legend == "Modifier" %}
     <a class="back-container" href="{{ url_for('wastes.waste', waste_id=waste.id) }}" target="_self">
         <img src="{{ url_for('static', filename='assets/icons/back_0.svg') }}" alt="back">
     </a>
     {% endif %}
-
-    <div class="scroll-container-3"></div>
 </div>
 {% endblock content %}

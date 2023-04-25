@@ -17,7 +17,9 @@
         <h2>Recycler</h2>
         <p>
             {% for item in waste.list_recycling_possibilitites.split("\n") %}
+            {% if not ("IA" in item or "désolé" in item) %}
             {{ item }}<br>
+            {% endif %}
             {% endfor %}
         </p>
     </div>
