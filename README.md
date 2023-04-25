@@ -165,15 +165,17 @@ L'application Ekoroji permet de :
 </p>
 <h4>Les déchets</h4>
 <p float="left">
-  <img src="doc/img/galerie/Ekoroji_waste-new.png" width="24%" />
-  <img src="doc/img/galerie/Ekoroji_waste_2.png" width="24%" /> 
-  <img src="doc/img/galerie/Ekoroji_waste-details_2.png" width="24%" />
-  <img src="doc/img/galerie/Ekoroji_waste-delete_2.png" width="24%" />
+  <img src="doc/img/galerie/Ekoroji_waste-new.png" width="19%" />
+  <img src="doc/img/galerie/Ekoroji_waste_2.png" width="19%" /> 
+  <img src="doc/img/galerie/Ekoroji_waste-update_2.png" width="19%" />
+  <img src="doc/img/galerie/Ekoroji_waste-details_2.png" width="19%" />
+  <img src="doc/img/galerie/Ekoroji_waste-delete_2.png" width="19%" />
 </p>
 <h4>Les articles</h4>
 <p float="left">
-  <img src="doc/img/galerie/Ekoroji_article-new.png" width="32%" />
-  <img src="doc/img/galerie/Ekoroji_article_2.png" width="32%" /> 
-  <img src="doc/img/galerie/Ekoroji_article-delete_2.png" width="32%" />
+  <img src="doc/img/galerie/Ekoroji_article-new.png" width="24%" />
+  <img src="doc/img/galerie/Ekoroji_article_2.png" width="24%" /> 
+  <img src="doc/img/galerie/Ekoroji_article-update_2.png" width="24%" />
+  <img src="doc/img/galerie/Ekoroji_article-delete_2.png" width="24%" />
 </p>
 </center>
