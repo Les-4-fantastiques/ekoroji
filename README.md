@@ -121,7 +121,7 @@ Maintenant, vous êtes prêt à exécuter Ekoroji en utilisant votre clé d'API 
   - Utiliser un écran vertical pour bénéficier de la version portrait.
     > 🗒️ **:** Les fonctionnalités de l'application ne sont pas optimisées pour les écrans horizontaux.
   - Utiliser le mode développeur `F12` ou `inspecter` de votre navigateur en passant en mode téléphone pour bénéficier de la version portrait.
-    > 🗒️ **:** Nous avons conçu le site avec un format 1080x2400 mais il est possible de l'utiliser sur d'autres formats tels que les formats de téléphone proposés par votre naviateur.
+    > 🗒️ **:** Nous avons conçu le site avec un format 1080x2400 mais il est possible de l'utiliser sur d'autres formats tels que les formats de téléphone proposés par votre navigateur.
     
 
 ---
