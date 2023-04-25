@@ -27,9 +27,9 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
   - [Prérequis](#prérequis)
-  - [Configuration de la clé d'API OpenAI](#configuration)
-  - [Exécution de l'application](#exécution-de-l'application)
-- [Fonctionnalités](#fonctionnalités)
+  - [Configuration de la clé d'API OpenAI](#configuration-de-la-clé-dapi-openai)
+  - [Exécution de l'application](#exécution-de-lapplication)
+- [Fonctionnalités de l'application](##fonctionnalités-de-lapplication)
 - [Contributeurs](#contributeurs)
 - [Galerie](#galerie)
 
@@ -107,6 +107,8 @@ Avant de pouvoir exécuter Ekoroji, il est important de noter que nous utilisons
 
 Maintenant, vous êtes prêt à exécuter Ekoroji en utilisant votre clé d'API OpenAI configurée.
 
+> 🗒️ **:** Pour accéder à votre quota de demande à l'API, nous vous redirigeons vers [cette page](https://rapidapi.com/developer/billing/subscriptions-and-usage).
+
 <a name="exécution-de-l'application"></a>
 ### Exécution de l'application
 
@@ -142,10 +144,10 @@ L'application Ekoroji permet de :
 <a name="contributeurs"></a>
 ## Contributeurs
 
-- [@untypequicode](https://github.com/untypequicode) : manager | développeur Python | développeur web
-- [@ambre66160](https://github.com/ambre66160) : développeuse web
-- [@benoiurlc](#) : responsable de base de données
-- [@ghostizzoks](#) : développeur Python
+- [@untypequicode](https://github.com/untypequicode) `Ethan FACCA` : manager | développeur Python | développeur web
+- [@ambre66160](https://github.com/ambre66160) `Ambre FLORETTE` : développeuse web
+- [@benoiurlc](#) `Benoît URLACHER` : responsable de base de données
+- [@ghostizzoks](#) `KYLIAN ZHEN-CLAVERIE` : développeur Python
 <center>
 <img src="doc/img/Les-4-Fantastiques.png" width="75%" />
 </center>
