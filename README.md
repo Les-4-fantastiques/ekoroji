@@ -91,11 +91,9 @@ Avant de pouvoir exécuter Ekoroji, il est important de noter que nous utilisons
 
 3. Abonnez-vous à l'API pour obtenir votre clé d'API.
 
-<center>
-<p>
+<p align="center">
   <img src="doc/img/Tuto_key_apiopenai.png" width="75%" />
 </p>
-</center>
 
 4. Ouvrez le fichier `sources/app/openai/key_to_encryption.py`.
 
@@ -150,9 +148,9 @@ L'application Ekoroji permet de :
 - [@ambre66160](https://github.com/ambre66160) `Ambre FLORETTE` : développeuse web
 - [@benoiurlc](#) `Benoît URLACHER` : responsable de base de données
 - [@ghostizzoks](#) `KYLIAN ZHEN-CLAVERIE` : développeur Python
-<center>
+<p align="center">
 <img src="doc/img/Les-4-Fantastiques.png" width="75%" />
-</center>
+</p>
 
 ---
 
