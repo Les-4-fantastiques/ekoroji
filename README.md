@@ -29,7 +29,7 @@
   - [Prérequis](#prérequis)
   - [Configuration de la clé d'API OpenAI](#configuration-de-la-clé-dapi-openai)
   - [Exécution de l'application](#exécution-de-lapplication)
-- [Fonctionnalités de l'application](##fonctionnalités-de-lapplication)
+- [Fonctionnalités de l'application](#fonctionnalités-de-lapplication)
 - [Contributeurs](#contributeurs)
 - [Galerie](#galerie)
 
