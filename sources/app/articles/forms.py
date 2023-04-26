@@ -4,6 +4,9 @@ from wtforms.validators import DataRequired, Length, URL, ValidationError
 from app.models import Article
 
 class ArticleForm(FlaskForm):
+    """
+    Formulaire pour ajouter un nouvel article
+    """
     article_title = StringField('Titre', validators=[
         DataRequired(), Length(min=2, max=74)])
     article_content = StringField('Résumé', validators=[
@@ -15,6 +18,9 @@ class ArticleForm(FlaskForm):
     article_validated = SubmitField("Ajouter l'article")
 
     def validate_link(self, article_link):
+        """
+        Validation pour vérifier si le lien d'article est déjà utilisé
+        """
         article = Article.query.filter_by(link=article_link.data).first()
         if article:
             raise ValidationError("Ce lien d'article est déjà utilisé.")
