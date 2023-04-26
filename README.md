@@ -161,15 +161,14 @@ L'application Ekoroji permet de :
 <p align="center">
   <img src="doc/video/demo-dechet.gif" alt="SecureEncryption" width=90%"/>
 </p>
-<center>
 <h4>Les pages principales</h4>
-<p float="left">
+<p align="center">
   <img src="doc/img/galerie/Ekoroji_articles_2.png" width="32%" />
   <img src="doc/img/galerie/Ekoroji_index_2.png" width="32%" /> 
   <img src="doc/img/galerie/Ekoroji_popular_2.png" width="32%" />
 </p>
 <h4>Les déchets</h4>
-<p float="left">
+<p align="center">
   <img src="doc/img/galerie/Ekoroji_waste_new.png" width="19%" />
   <img src="doc/img/galerie/Ekoroji_waste_2.png" width="19%" /> 
   <img src="doc/img/galerie/Ekoroji_waste_update_2.png" width="19%" />
@@ -177,10 +176,9 @@ L'application Ekoroji permet de :
   <img src="doc/img/galerie/Ekoroji_waste_delete_2.png" width="19%" />
 </p>
 <h4>Les articles</h4>
-<p float="left">
+<p align="center">
   <img src="doc/img/galerie/Ekoroji_article_new.png" width="24%" />
   <img src="doc/img/galerie/Ekoroji_article_2.png" width="24%" /> 
   <img src="doc/img/galerie/Ekoroji_article_update_2.png" width="24%" />
   <img src="doc/img/galerie/Ekoroji_article_delete_2.png" width="24%" />
 </p>
-</center>
