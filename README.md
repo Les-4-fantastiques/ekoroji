@@ -158,6 +158,9 @@ L'application Ekoroji permet de :
 
 <a name="galerie"></a>
 ## Galerie
+<p align="center">
+  <img src="doc/video/demo-dechet.gif" alt="SecureEncryption" width=90%"/>
+</p>
 <center>
 <h4>Les pages principales</h4>
 <p float="left">
